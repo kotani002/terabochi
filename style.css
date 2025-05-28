@@ -1,7 +1,7 @@
 /* style.css */
 .box {
     background-color: #002504;
-    background: url(images/background/background.png);
+    background: url(images/background/background.svg);
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
@@ -206,6 +206,9 @@ body {
 
 /*カルーセルエリア*/
 .carousel {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -273,6 +276,32 @@ body {
 .slide5 {
     background-image: url(images/news/hourenji/tokyo06.jpg);
 }
+
+.nav-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 10;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    padding: 50px 10px 50px 10px;
+    cursor: pointer;
+    font-size: 20px;
+    border-radius: 5px;
+  }
+
+  .nav-button.prev {
+    left: 10px;
+  }
+
+  .nav-button.next {
+    right: 10px;
+  }
+
+  .nav-button:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+  }
 
 /* デフォルトで表示されるラジオボタンの非表示 */
 input[type="radio"] {
@@ -385,8 +414,10 @@ input[type="radio"] {
     line-height: 17px;
 }
 
-.top_news_link {
+.top_news_box {
     padding: 30px;
+    display: flex;
+    justify-items: center;
 }
 
 .footer_banner {
@@ -399,19 +430,23 @@ input[type="radio"] {
     justify-content: center;
 }
 
+.news_link_image {
+    width: 100%;
+    height: auto;
+    min-height: 80px;
+}
+
 @media screen and (max-width:480px) {
     .footer_banner_image {
         margin-left: 10px;
         max-width: 100px;
     }
+
+    .news_link_image {
+        width: 100%;
+        height: auto;
+    }
 }
-
-.news_toplink {
-    width: 100%;
-}
-
-
-/**/
 
 /*トップページの最上部にあるバナー*/
 .top_banner {

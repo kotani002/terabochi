@@ -12,6 +12,7 @@
 
 <div class="content">
 	<div class="box">
+
 		<body>
 			<!--固定ヘッダー部分の作成-->
 			<header>
@@ -22,8 +23,10 @@
 								class="header_title_logo"></a>
 					</div>
 					<div class="tel-box">
-						<a href="info/index.html"><img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top"></a>
-						<a href="tel:0120-686-684"><img src="images/top/top_tel2.svg" alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
+						<a href="info/index.html"><img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+								class="tel-box-top"></a>
+						<a href="tel:0120-686-684"><img src="images/top/top_tel2.svg" alt="電話番号:0120-686-684"
+								class="tel-box-bottom"></a>
 					</div>
 				</div>
 				<!--固定ヘッダー内のメニューボタン-->
@@ -51,11 +54,11 @@
 								class="UI_funeral_process"></a>
 					</div>
 
+					<!--カルーセルエリア-->
 					<div class="top_carouselArea">
-						<!--カルーセルエリア-->
 						<div class="carousel">
 							<!-- ラジオボタン -->
-							<input type="radio" name="slide" id="slide1" checked> <!-- 最初から選択状態にする -->
+							<input type="radio" name="slide" id="slide1" checked>
 							<input type="radio" name="slide" id="slide2">
 							<input type="radio" name="slide" id="slide3">
 							<input type="radio" name="slide" id="slide4">
@@ -63,21 +66,13 @@
 
 							<!-- 表示するスライド -->
 							<div class="slides">
-								<div class="slide">
-									<a href="https://www.tojyuin.com/" class="slide slide1"></a>
-								</div>
-								<div class="slide">
-									<a href="http://www.terabochi.com/event/index.php" class="slide slide2"></a>
-								</div>
-								<div class="slide">
-									<a href="https://www.terabochi.com/tokyo/enkouji.php" class="slide slide3"></a>
-								</div>
-								<div class="slide">
-									<a href="https://www.tokoin.com/" class="slide slide4"></a>
-								</div>
-								<div class="slide">
-									<a href="http://www.hourenji.or.jp" class="slide slide5"></a>
-								</div>
+								<div class="slide"><a href="https://www.tojyuin.com/" class="slide slide1"></a></div>
+								<div class="slide"><a href="http://www.terabochi.com/event/index.php"
+										class="slide slide2"></a></div>
+								<div class="slide"><a href="https://www.terabochi.com/tokyo/enkouji.php"
+										class="slide slide3"></a></div>
+								<div class="slide"><a href="https://www.tokoin.com/" class="slide slide4"></a></div>
+								<div class="slide"><a href="http://www.hourenji.or.jp" class="slide slide5"></a></div>
 							</div>
 
 							<!-- ナビゲーション -->
@@ -88,8 +83,84 @@
 								<label for="slide4" class="bar"></label>
 								<label for="slide5" class="bar"></label>
 							</div>
+
+							<!-- 左右ボタン -->
+							<button class="nav-button prev">&#9664;</button>
+							<button class="nav-button next">&#9654;</button>
 						</div>
 					</div>
+
+					<!-- javascriptで左右ボタンでスライド切り替え() -->
+					<script>
+						const totalSlides = 5;
+						const prevBtn = document.querySelector('.nav-button.prev');
+						const nextBtn = document.querySelector('.nav-button.next');
+						let currentIndex = 1;
+
+						//スライドの場所の確認
+						function getCurrentSlideIndex() {
+							for (let i = 1; i <= totalSlides; i++) {
+								if (document.getElementById(`slide${i}`).checked) return i;
+							}
+							return 1;
+						}
+
+						//Clickされたら前に戻る
+						prevBtn.addEventListener('click', () => {
+							let current = getCurrentSlideIndex();
+							let prev = current - 1;
+							if (prev < 1) prev = totalSlides;
+							document.getElementById(`slide${prev}`).checked = true;
+						});
+						//Clickされたら次に進む
+						nextBtn.addEventListener('click', () => {
+							let current = getCurrentSlideIndex();
+							let next = current + 1;
+							if (next > totalSlides) next = 1;
+							document.getElementById(`slide${next}`).checked = true;
+						});
+
+						// スワイプ対応
+						const slidesContainer = document.querySelector('.slides');
+						let startX = 0;
+						let endX = 0;
+
+						// タッチされた時にスライドさせる
+						slidesContainer.addEventListener('touchstart', e => {
+							startX = e.touches[0].clientX;
+						});
+
+						slidesContainer.addEventListener('touchend', e => {
+							endX = e.changedTouches[0].clientX;
+							handleSwipe();
+						});
+
+						//左右にスワイプされたらその方向のスライドに変更
+						function handleSwipe() {
+							const diff = endX - startX;
+							if (Math.abs(diff) > 50) {
+								if (diff > 0) {
+									goToSlide(currentIndex - 1);
+								} else {
+									goToSlide(currentIndex + 1);
+								}
+							}
+						}
+
+						// スライドの切り替え
+						function goToSlide(index) {
+							if (index < 1) index = totalSlides;
+							if (index > totalSlides) index = 1;
+							document.getElementById(`slide${index}`).checked = true;
+							currentIndex = index;
+						}
+
+						// 自動再生（5000ミリ(5秒)）
+						let autoPlayInterval = setInterval(() => {
+							goToSlide(currentIndex + 1);
+						}, 5000);
+					</script>
+
 					<H2><b>―― 新着情報 ――</b></H2>
 
 					<section class="top_news_section">
@@ -149,8 +220,8 @@
 
 								<a href="https://www.terabochi.com/tokyo/enkouji.php" class="news_card">
 									<div class="news_card_picture">
-										<img src="images/news/enkouji/enkouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像"
-											width="300" height="200">
+										<img src="images/news/enkouji/enkouji01.jpg" alt="円光寺画像" width="300"
+											height="200">
 									</div>
 									<div class="news_description">
 										<p>
@@ -166,8 +237,8 @@
 
 								<a href="https://www.tojyuin.com/" class="news_card">
 									<div class="news_card_picture">
-										<img src="images/news/toujyuin/toujyuin01.jpg" alt="葬儀の流れはこちら" class="テスト画像"
-											width="300" height="200">
+										<img src="images/news/toujyuin/toujyuin01.jpg" alt="東樹院イベント中" width="300"
+											height="200">
 									</div>
 									<div class="news_description">
 										<p>
@@ -183,8 +254,8 @@
 
 								<a href="http://www.terabochi.com/event/index.php" class="news_card">
 									<div class="news_card_picture">
-										<img src="images/news/iouji/iouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像"
-											width="300" height="200">
+										<img src="images/news/iouji/iouji01.jpg" alt="医王時イベント中" width="300"
+											height="200">
 									</div>
 									<div class="news_description">
 										<p>
@@ -198,8 +269,8 @@
 									</div>
 								</a>
 							</div>
-							<a href="https://www.terabochi.com/test_html/search/" class="top_news_link">
-								<img src="images/top/UI_news.svg" alt="最新情報一覧はこちら" class="news_toplink">
+							<a href="https://www.terabochi.com/test_html/search/" class="top_news_box">
+								<img src="images/common/UI_news.svg" alt="最新情報一覧はこちら" class="news_link_image">
 							</a>
 						</div>
 					</section>
