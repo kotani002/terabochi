@@ -10,13 +10,28 @@
 </head>
 
 <body>
-    <div class="haka-back-ground">
-
+    <div class="iframe-wrapper">
+        <iframe src="unity/index.html" frameborder="0" allowfullscreen>
+        </iframe>
     </div>
-    
+
     <style>
         body {
+            text-align: center;
             background-color: black;
+        }
+
+        .iframe-wrapper {
+            height: 100%;
+            overflow: hidden;
+        }
+
+        .iframe-wrapper iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </body>
