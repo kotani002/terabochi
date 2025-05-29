@@ -39,33 +39,34 @@ if ($success) {
 
 <body>
   <!--固定ヘッダー部分の作成-->
-  <header>
-    <div class="header_inner">
-      <div class="header_inner_top_box">
-        <p class="header_inner_logo">
-          <!--タイトルロゴの位置-->
-          <a href="../_index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-              class="header_title_logo" width="265" height="85"></a>
-          <a href="../info\index.html"><img src="../images/top/footer_tel.png" alt="電話番号:0120-686-684"
-              class="info" width="265" height="80"></a>
-        </p>
-      </div>
-      <!--固定ヘッダー内のメニューボタン-->
-      <div class="header_inner_menu">
-        <a href="../_index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す" class="UI_top_funeral"
-            width="200" height="150"></a>
-        <a href="../_index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-            class="UI_top_funeral" width="200" height="70"></a>
-        <a href="../_index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀" class="UI_top_funeral"
-            width="200" height="70"></a>
-        <a href="../_index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し" class="UI_top_funeral"
-            width="200" height="70"></a>
-        <a href="../yombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
-            class="UI_top_funeral" width="200" height="70"></a>
-      </div>
-    </div>
-  </header>
-
+	<header>
+		<div class="header_inner_logo">
+			<!--タイトルロゴの位置-->
+			<div class="titlerogo-box">
+				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+						class="header_title_logo"></a>
+			</div>
+			<div class="tel-box">
+				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+						class="tel-box-top"></a>
+				<a href="tel:0120-686-684"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
+						class="tel-box-bottom"></a>
+			</div>
+		</div>
+		<!--固定ヘッダー内のメニューボタン-->
+		<div class="header_inner_menu">
+			<a href="../search/index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
+					class="UI_top_funeral"></a>
+			<a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
+					class="UI_top_funeral"></a>
+			<a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
+					class="UI_top_funeral"></a>
+			<a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
+					class="UI_top_funeral"></a>
+			<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
+					class="UI_top_funeral"></a>
+		</div>
+	</header>
   <!--コンテンツ部分-->
   <!-- ここにトップページの本文を追加していく-->
   <main>

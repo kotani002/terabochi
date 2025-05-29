@@ -1,6 +1,7 @@
 <!-- index.html -->
 <!DOCTYPE html>
 <html>
+
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
@@ -9,73 +10,94 @@
 	<link rel="stylesheet" href="../style.css" />
 </head>
 
-<div class="content">
-	<div class="box">
-		<body>
-			<!--固定ヘッダー部分の作成-->
-			<header>
-				<div class="header_inner_logo">
-					<!--タイトルロゴの位置-->
-					<div class="titlerogo-box">
-						<a href="../_index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-								class="header_title_logo"></a>
-					</div>
-					<div class="tel-box">
-						<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top"></a>
-						<a href="tel:0120-686-684"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
-					</div>
-				</div>
-				<!--固定ヘッダー内のメニューボタン-->
-				<div class="header_inner_menu">
-					<a href="../search/index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
-							class="UI_top_funeral"></a>
-					<a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-							class="UI_top_funeral"></a>
-					<a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
-							class="UI_top_funeral"></a>
-					<a href="../moving/index.html"><img src="../images/top/push/UI_top_moving_push.svg" alt="お墓の引っ越し"
-							class="UI_top_funeral"></a>
-					<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
-							class="UI_top_funeral"></a>
-				</div>
-			</header>
+<body>
+	<!--固定ヘッダー部分の作成-->
+	<header>
+		<div class="header_inner_logo">
+			<!--タイトルロゴの位置-->
+			<div class="titlerogo-box">
+				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+						class="header_title_logo"></a>
+			</div>
+			<div class="tel-box">
+				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+						class="tel-box-top"></a>
+				<a href="tel:0120-686-684"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
+						class="tel-box-bottom"></a>
+			</div>
+		</div>
+		<!--固定ヘッダー内のメニューボタン-->
+		<div class="header_inner_menu">
+			<a href="../search\index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
+					class="UI_top_funeral"></a>
+			<a href="../eidaikuyou\index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
+					class="UI_top_funeral"></a>
+			<a href="../funeralservice\index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
+					class="UI_top_funeral"></a>
+			<a href="../moving\index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
+					class="UI_top_funeral"></a>
+			<a href="../tombstone\index.html"><img src="../images/top/push/UI_top_tombstone_push.svg" alt="墓石"
+					class="UI_top_funeral"></a>
+		</div>
+	</header>
 
-			<!--コンテンツ部分-->
-			<!-- ここにトップページの本文を追加していく-->
-			<main>
-				<div class="top_main_box">
-					<div class="inquiry_box">
-						<h3>お墓の引っ越しを行う事を「改葬(かいそう)」といいます</h3>
-					</div>
-					<div class="inquiry_box">
-					<img src="../images/moving/image_moving_top.svg" alt="改装許可申請" class="funeral_image">
-					</div>
-					<div class="inquiry_box">
-					<img src="../images/moving/image_moving_bottom.svg" alt="引っ越し作業" class="funeral_image">
-					</div>
+	<!--コンテンツ部分-->
+	<!-- ここにトップページの本文を追加していく-->
+	<main>
+		<div class="top_main_box">
+			<!-- 墓石の説明 -->
+			<div class="stone_inner">
+				<div class="stone_title_box">
+					<a href="haka3d.html" target="_blank" class="model-view">
+						<div class="description-button">
+							<img src="../images/tombstone/UI_3dmodel_button.svg" alt="3Dモデルを表示" class="inquiry_image">
+					</a>
+					<div class="stone_title_text">墓石の種類</div>
+				</div>
 
-					<div class="inquiry_box">
-					<img src="../images/common/UI_inquiry.svg" alt="お申し込みはこちらまで" class="inquiry_image">
+				<div class="description-box">
+					<div class="description-image-box">
+						<div class="western-description-box">
+							<img src="../images/tombstone/grave_japanese.png" alt="和式墓石1">
+							<div class="stone_title">和型墓石</div>
+							<p>
+								伝統的で格式を重んじる雰囲気の墓石<br>
+								縦に高い三段構造(竿石・上石・下台)です。<br>
+							</p>
+						</div>
+						<div class="western-description-box">
+							<img src="../images/tombstone/grave_western.png" alt="洋式墓石1">
+							<div class="stone_title">洋型墓石</div>
+							<p>
+								モダンで自由な雰囲気をした墓石<br>
+								横長で、直方体や曲線を使うデザインも多いです。<br>
+							</p>
+						</div>
 					</div>
 				</div>
-			</main>
+			</div>
+		</div>
+		<div class="inquiry_box">
+			<a href="../info/index.html">
+				<img src="../images/common/UI_inquiry.svg" alt="お申込み・お問い合わせはこちら" class="inquiry_image">
+			</a>
+		</div>
 
-			<!--フッター情報欄-->
-			<footer class="footer">
-				<div class="footer_banner">
-					<a href="https://www.tojyuin.com/"><img src="../images/footer/bn_01.jpg" alt="東樹院"
-							class="footer_banner_image"></a>
-					<a href="http://www.project-x.co.jp/320003/index.shtml"><img src="../images/footer/bn_02.jpg"
-							alt="昭和セレモニー" class="footer_banner_image"></a>
-					<a href="https://little-emperor.weebly.com/"><img src="../images/footer/bn_03.png" alt="小皇帝合同会社"
-							class="footer_banner_image"></a>
-				</div>
-				<div class="footer_text">
-					<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
-				</div>
-			</footer>
-		</body>
-	</div>
-</div>
+		<!--フッター情報欄-->
+		<footer class="footer">
+			<div class="footer_banner">
+				<a href="https://www.tojyuin.com/"><img src="../images/footer/bn_01.jpg" alt="東樹院"
+						class="footer_banner_image"></a>
+				<a href="http://www.project-x.co.jp/320003/index.shtml"><img src="../images/footer/bn_02.jpg"
+						alt="昭和セレモニー" class="footer_banner_image"></a>
+				<a href="https://little-emperor.weebly.com/"><img src="../images/footer/bn_03.png" alt="小皇帝合同会社"
+						class="footer_banner_image"></a>
+			</div>
+			<div class="footer_text">
+				<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
+			</div>
+		</footer>
+	</main>
+</body>
 
 </html>

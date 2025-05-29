@@ -10,289 +10,302 @@
 	<link rel="stylesheet" href="style.css" />
 </head>
 
-<div class="content">
-	<div class="box">
+<body>
+	<!--固定ヘッダー部分の作成-->
+	<header>
+		<div class="header_inner_logo">
+			<!--タイトルロゴの位置-->
+			<div class="titlerogo-box">
+				<a href="index.html"><img src="images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+						class="header_title_logo"></a>
+			</div>
+			<div class="tel-box">
+				<a href="info/index.html"><img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+						class="tel-box-top"></a>
+				<a href="info/index.html" id="telLinkNumber"><img src="images/top/top_tel2.svg" alt="電話番号:0120-686-684"
+						class="tel-box-bottom"></a>
 
-		<body>
-			<!--固定ヘッダー部分の作成-->
-			<header>
-				<div class="header_inner_logo">
-					<!--タイトルロゴの位置-->
-					<div class="titlerogo-box">
-						<a href="_index.html"><img src="images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-								class="header_title_logo"></a>
-					</div>
-					<div class="tel-box">
-						<a href="info/index.html"><img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-								class="tel-box-top"></a>
-						<a href="tel:0120-686-684"><img src="images/top/top_tel2.svg" alt="電話番号:0120-686-684"
-								class="tel-box-bottom"></a>
-					</div>
-				</div>
-				<!--固定ヘッダー内のメニューボタン-->
-				<div class="header_inner_menu">
-					<a href="search\index.html"><img src="images/top/UI_top_search.svg" alt="寺墓地を探す"
-							class="UI_top_funeral"></a>
-					<a href="eidaikuyou\index.html"><img src="images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-							class="UI_top_funeral"></a>
-					<a href="funeralservice\index.html"><img src="images/top/UI_top_funeral.svg" alt="葬儀"
-							class="UI_top_funeral"></a>
-					<a href="moving\index.html"><img src="images/top/UI_top_moving.svg" alt="お墓の引っ越し"
-							class="UI_top_funeral"></a>
-					<a href="tombstone\index.html"><img src="images/top/UI_top_tombstone.svg" alt="墓石"
-							class="UI_top_funeral"></a>
-				</div>
-			</header>
+				<!--ここのJSで端末を判断する-->
+				<script src="platform.js"></script>
+				<script>
+					//端末のosを判断する
+					var os = platform.os.toString().toLowerCase();
 
-			<!--コンテンツ部分-->
-			<!-- ここにトップページの本文を追加していく-->
-			<main>
-				<div class="top_main_box">
-					<!--トップ画面の最上部に表示されるバナー-->
-					<div class="top_banner">
-						<a href="funeralservice\index.html"><img src="images/top/UI_funeral_process.svg" alt="葬儀の流れはこちら"
-								class="UI_funeral_process"></a>
-					</div>
+					//platform.jsで取得したOSの種類によってリンクの先を変更する
+					if (os.indexOf("android") !== -1 || os.indexOf("ios") !== -1) {
+						Replace();
+					}
 
-					<!--カルーセルエリア-->
-					<div class="top_carouselArea">
-						<div class="carousel">
-							<!-- ラジオボタン -->
-							<input type="radio" name="slide" id="slide1" checked>
-							<input type="radio" name="slide" id="slide2">
-							<input type="radio" name="slide" id="slide3">
-							<input type="radio" name="slide" id="slide4">
-							<input type="radio" name="slide" id="slide5">
+					//platform.jsを使用して端末がスマホであることを判断してfunctionを呼ぶ
+					function Replace() {
+						let telLinkNumber = document.getElementById("telLinkNumber");
+						let telNumber = "tel:0120-686-684";
 
-							<!-- 表示するスライド -->
-							<div class="slides">
-								<div class="slide"><a href="https://www.tojyuin.com/" class="slide slide1"></a></div>
-								<div class="slide"><a href="http://www.terabochi.com/event/index.php"
-										class="slide slide2"></a></div>
-								<div class="slide"><a href="https://www.terabochi.com/tokyo/enkouji.php"
-										class="slide slide3"></a></div>
-								<div class="slide"><a href="https://www.tokoin.com/" class="slide slide4"></a></div>
-								<div class="slide"><a href="http://www.hourenji.or.jp" class="slide slide5"></a></div>
-							</div>
+						//href属性の値を書き換える
+						telLinkNumber.setAttribute('href', telNumber);
+					}
+				</script>
+			</div>
+		</div>
+		<!--固定ヘッダー内のメニューボタン-->
+		<div class="header_inner_menu">
+			<a href="search\index.html"><img src="images/top/UI_top_search.svg" alt="寺墓地を探す" class="UI_top_funeral"></a>
+			<a href="eidaikuyou\index.html"><img src="images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
+					class="UI_top_funeral"></a>
+			<a href="funeralservice\index.html"><img src="images/top/UI_top_funeral.svg" alt="葬儀"
+					class="UI_top_funeral"></a>
+			<a href="moving\index.html"><img src="images/top/UI_top_moving.svg" alt="お墓の引っ越し"
+					class="UI_top_funeral"></a>
+			<a href="tombstone\index.html"><img src="images/top/UI_top_tombstone.svg" alt="墓石"
+					class="UI_top_funeral"></a>
+		</div>
+	</header>
 
-							<!-- ナビゲーション -->
-							<div class="navigation">
-								<label for="slide1" class="bar"></label>
-								<label for="slide2" class="bar"></label>
-								<label for="slide3" class="bar"></label>
-								<label for="slide4" class="bar"></label>
-								<label for="slide5" class="bar"></label>
-							</div>
+	<!--コンテンツ部分-->
+	<!-- ここにトップページの本文を追加していく-->
+	<main>
+		<div class="top_main_box">
+			<!--トップ画面の最上部に表示されるバナー-->
+			<div class="top_banner">
+				<a href="funeralservice\index.html"><img src="images/top/UI_funeral_process.svg" alt="葬儀の流れはこちら"
+						class="UI_funeral_process"></a>
+			</div>
 
-							<!-- 左右ボタン -->
-							<button class="nav-button prev">&#9664;</button>
-							<button class="nav-button next">&#9654;</button>
+			<!--カルーセルエリア-->
+			<div class="top_carouselArea">
+				<div class="carousel">
+					<!-- ラジオボタン -->
+					<input type="radio" name="slide" id="slide1" checked>
+					<input type="radio" name="slide" id="slide2">
+					<input type="radio" name="slide" id="slide3">
+					<input type="radio" name="slide" id="slide4">
+					<input type="radio" name="slide" id="slide5">
+
+					<!-- 表示するスライド -->
+					<div class="slides">
+						<div class="slide"><a href="https://www.tojyuin.com/" class="slide slide1"></a></div>
+						<div class="slide"><a href="http://www.terabochi.com/event/index.php" class="slide slide2"></a>
 						</div>
+						<div class="slide"><a href="https://www.terabochi.com/tokyo/enkouji.php"
+								class="slide slide3"></a></div>
+						<div class="slide"><a href="https://www.tokoin.com/" class="slide slide4"></a></div>
+						<div class="slide"><a href="http://www.hourenji.or.jp" class="slide slide5"></a></div>
 					</div>
 
-					<!-- javascriptで左右ボタンでスライド切り替え() -->
-					<script>
-						const totalSlides = 5;
-						const prevBtn = document.querySelector('.nav-button.prev');
-						const nextBtn = document.querySelector('.nav-button.next');
-						let currentIndex = 1;
+					<!-- ナビゲーション -->
+					<div class="navigation">
+						<label for="slide1" class="bar"></label>
+						<label for="slide2" class="bar"></label>
+						<label for="slide3" class="bar"></label>
+						<label for="slide4" class="bar"></label>
+						<label for="slide5" class="bar"></label>
+					</div>
 
-						//スライドの場所の確認
-						function getCurrentSlideIndex() {
-							for (let i = 1; i <= totalSlides; i++) {
-								if (document.getElementById(`slide${i}`).checked) return i;
-							}
-							return 1;
-						}
+					<!-- 左右ボタン -->
+					<button class="nav-button prev">&#9664;</button>
+					<button class="nav-button next">&#9654;</button>
+				</div>
+			</div>
 
-						//Clickされたら前に戻る
-						prevBtn.addEventListener('click', () => {
-							let current = getCurrentSlideIndex();
-							let prev = current - 1;
-							if (prev < 1) prev = totalSlides;
-							document.getElementById(`slide${prev}`).checked = true;
-						});
-						//Clickされたら次に進む
-						nextBtn.addEventListener('click', () => {
-							let current = getCurrentSlideIndex();
-							let next = current + 1;
-							if (next > totalSlides) next = 1;
-							document.getElementById(`slide${next}`).checked = true;
-						});
+			<!-- javascriptで左右ボタンでスライド切り替え() -->
+			<script>
+				const totalSlides = 5;
+				const prevBtn = document.querySelector('.nav-button.prev');
+				const nextBtn = document.querySelector('.nav-button.next');
+				let currentIndex = 1;
 
-						// スワイプ対応
-						const slidesContainer = document.querySelector('.slides');
-						let startX = 0;
-						let endX = 0;
+				//スライドの場所の確認
+				function getCurrentSlideIndex() {
+					for (let i = 1; i <= totalSlides; i++) {
+						if (document.getElementById(`slide${i}`).checked) return i;
+					}
+					return 1;
+				}
 
-						// タッチされた時にスライドさせる
-						slidesContainer.addEventListener('touchstart', e => {
-							startX = e.touches[0].clientX;
-						});
+				//Clickされたら前に戻る
+				prevBtn.addEventListener('click', () => {
+					let current = getCurrentSlideIndex();
+					let prev = current - 1;
+					if (prev < 1) prev = totalSlides;
+					document.getElementById(`slide${prev}`).checked = true;
+				});
+				//Clickされたら次に進む
+				nextBtn.addEventListener('click', () => {
+					let current = getCurrentSlideIndex();
+					let next = current + 1;
+					if (next > totalSlides) next = 1;
+					document.getElementById(`slide${next}`).checked = true;
+				});
 
-						slidesContainer.addEventListener('touchend', e => {
-							endX = e.changedTouches[0].clientX;
-							handleSwipe();
-						});
+				// スワイプ対応
+				const slidesContainer = document.querySelector('.slides');
+				let startX = 0;
+				let endX = 0;
 
-						//左右にスワイプされたらその方向のスライドに変更
-						function handleSwipe() {
-							const diff = endX - startX;
-							if (Math.abs(diff) > 50) {
-								if (diff > 0) {
-									goToSlide(currentIndex - 1);
-								} else {
-									goToSlide(currentIndex + 1);
-								}
-							}
-						}
+				// タッチされた時にスライドさせる
+				slidesContainer.addEventListener('touchstart', e => {
+					startX = e.touches[0].clientX;
+				});
 
-						// スライドの切り替え
-						function goToSlide(index) {
-							if (index < 1) index = totalSlides;
-							if (index > totalSlides) index = 1;
-							document.getElementById(`slide${index}`).checked = true;
-							currentIndex = index;
-						}
+				slidesContainer.addEventListener('touchend', e => {
+					endX = e.changedTouches[0].clientX;
+					handleSwipe();
+				});
 
-						// 自動再生（5000ミリ(5秒)）
-						let autoPlayInterval = setInterval(() => {
+				//左右にスワイプされたらその方向のスライドに変更
+				function handleSwipe() {
+					const diff = endX - startX;
+					if (Math.abs(diff) > 50) {
+						if (diff > 0) {
+							goToSlide(currentIndex - 1);
+						} else {
 							goToSlide(currentIndex + 1);
-						}, 5000);
-					</script>
+						}
+					}
+				}
 
-					<H2><b>―― 新着情報 ――</b></H2>
+				// スライドの切り替え
+				function goToSlide(index) {
+					if (index < 1) index = totalSlides;
+					if (index > totalSlides) index = 1;
+					document.getElementById(`slide${index}`).checked = true;
+					currentIndex = index;
+				}
 
-					<section class="top_news_section">
-						<div class="top_news_section_inner">
-							<div class="top_news">
-								<!--新着情報の画像と説明文をまとめて管理するクラス-->
-								<a class="news_card" href="https://www.tojyuin.com/">
-									<div class="news_card_picture">
-										<img src="images/news/toujyuin/toujyuin01.jpg" alt="toujyuin" class="toujyuin"
-											width="300" height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											東樹院墓地及び永代供養墓<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2025.4
-										</p>
-									</div>
-								</a>
+				// 自動再生（5000ミリ(5秒)）
+				let autoPlayInterval = setInterval(() => {
+					goToSlide(currentIndex + 1);
+				}, 5000);
+			</script>
 
-								<a href="http://www.terabochi.com/event/index.php" class="news_card">
-									<div class="news_card_picture">
-										<img src="images/news/iouji/iouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像"
-											width="300" height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											医王寺墓地及び永代供養墓<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2025.4
-										</p>
-									</div>
-								</a>
+			<H2><b>―― 新着情報 ――</b></H2>
 
-								<a href="https://www.tokoin.com/index.html" class="news_card">
-									<div class="news_card_picture">
-										<img src="images/news/toukouin/toukouin01.jpg" alt="葬儀の流れはこちら" class="テスト画像"
-											width="300" height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											東光院墓地及び永代供養墓<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2025.4
-										</p>
-									</div>
-								</a>
-
-								<a href="https://www.terabochi.com/tokyo/enkouji.php" class="news_card">
-									<div class="news_card_picture">
-										<img src="images/news/enkouji/enkouji01.jpg" alt="円光寺画像" width="300"
-											height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											円光寺墓地<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2025.4
-										</p>
-									</div>
-								</a>
-
-								<a href="https://www.tojyuin.com/" class="news_card">
-									<div class="news_card_picture">
-										<img src="images/news/toujyuin/toujyuin01.jpg" alt="東樹院イベント中" width="300"
-											height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											東樹院<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2022.1.1
-										</p>
-									</div>
-								</a>
-
-								<a href="http://www.terabochi.com/event/index.php" class="news_card">
-									<div class="news_card_picture">
-										<img src="images/news/iouji/iouji01.jpg" alt="医王時イベント中" width="300"
-											height="200">
-									</div>
-									<div class="news_description">
-										<p>
-											医王寺　深沢供養塔<br>イベント中
-										</p>
-									</div>
-									<div class="news_description_footer">
-										<p>
-											2022.1.7
-										</p>
-									</div>
-								</a>
+			<section class="top_news_section">
+				<div class="top_news_section_inner">
+					<div class="top_news">
+						<!--新着情報の画像と説明文をまとめて管理するクラス-->
+						<a href="https://www.tokoin.com/index.html" class="news_card">
+							<div class="news_card_picture">
+								<img src="images/news/toukouin/toukouin.png" alt="葬儀の流れはこちら" class="テスト画像" width="300"
+									height="200">
 							</div>
-							<a href="https://www.terabochi.com/test_html/search/" class="top_news_box">
-								<img src="images/common/UI_news.svg" alt="最新情報一覧はこちら" class="news_link_image">
-							</a>
-						</div>
-					</section>
-				</div>
-			</main>
+							<div class="news_description">
+								<p>
+									東光院墓地及び永代供養墓<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2025.4
+								</p>
+							</div>
+						</a>
 
-			<!--フッター情報欄-->
-			<footer class="footer">
-				<div class="footer_banner">
-					<a href="https://www.tojyuin.com/"><img src="images/footer/bn_01.jpg" alt="東樹院"
-							class="footer_banner_image"></a>
-					<a href="http://www.project-x.co.jp/320003/index.shtml"><img src="images/footer/bn_02.jpg"
-							alt="昭和セレモニー" class="footer_banner_image"></a>
-					<a href="https://little-emperor.weebly.com/"><img src="images/footer/bn_03.png" alt="小皇帝合同会社"
-							class="footer_banner_image"></a>
-				</div>
-				<div class="footer_text">
-					<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
-				</div>
-			</footer>
-		</body>
-	</div>
-</div>
+						<a class="news_card" href="https://www.tojyuin.com/">
+							<div class="news_card_picture">
+								<img src="images/news/toujyuin/toujyuin.png" alt="toujyuin" class="toujyuin"
+									width="300" height="200">
+							</div>
+							<div class="news_description">
+								<p>
+									東樹院墓地及び永代供養墓<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2025.4
+								</p>
+							</div>
+						</a>
 
+						<a href="https://www.terabochi.com/event/index.php" class="news_card">
+							<div class="news_card_picture">
+								<img src="images/news/iouji/iouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像" width="300"
+									height="200">
+							</div>
+							<div class="news_description">
+								<p>
+									医王寺墓地及び永代供養墓<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2025.4
+								</p>
+							</div>
+						</a>
+
+						<a href="https://www.terabochi.com/tokyo/enkouji.php" class="news_card">
+							<div class="news_card_picture">
+								<img src="images/news/enkouji/enkouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像" width="300"
+									height="200">
+							</div>
+							<div class="news_description">
+								<p>
+									円光寺墓地<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2025.4
+								</p>
+							</div>
+						</a>
+
+						<a href="https://www.tojyuin.com/" class="news_card">
+							<div class="news_card_picture">
+								<img src="images/news/toujyuin/toujyuin01.jpg" alt="葬儀の流れはこちら" class="テスト画像" width="300"
+									height="200">
+							</div>
+							<div class="news_description">
+								<p>
+									東樹院<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2022.1.1
+								</p>
+							</div>
+						</a>
+
+						<a href="http://www.terabochi.com/event/index.php" class="news_card">
+							<div class="news_card_picture">
+								<img src="images/news/iouji/iouji01.jpg" alt="葬儀の流れはこちら" class="テスト画像" width="300"
+									height="200">
+							</div>
+							<div class="news_description">
+								<p>
+									医王寺　深沢供養塔<br>イベント中
+								</p>
+							</div>
+							<div class="news_description_footer">
+								<p>
+									2022.1.7
+								</p>
+							</div>
+						</a>
+					</div>
+					<a href="https://www.terabochi.com/test_html/search/" class="top_news_link">
+						<img src="images/top/UI_news.svg" alt="最新情報一覧はこちら" class="news_toplink">
+					</a>
+				</div>
+			</section>
+		</div>
+		<!--フッター情報欄-->
+		<footer class="footer">
+			<div class="footer_banner">
+				<a href="https://www.tojyuin.com/"><img src="images/footer/bn_01.jpg" alt="東樹院"
+						class="footer_banner_image"></a>
+				<a href="http://www.project-x.co.jp/320003/index.shtml"><img src="images/footer/bn_02.jpg" alt="昭和セレモニー"
+						class="footer_banner_image"></a>
+				<a href="https://little-emperor.weebly.com/"><img src="images/footer/bn_03.png" alt="小皇帝合同会社"
+						class="footer_banner_image"></a>
+			</div>
+			<div class="footer_text">
+				<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
+			</div>
+		</footer>
+	</main>
+</body>
 </html>
