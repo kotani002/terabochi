@@ -39,48 +39,50 @@ if ($success) {
 
 <body>
   <!--固定ヘッダー部分の作成-->
-	<header>
-		<div class="header_inner_logo">
-			<!--タイトルロゴの位置-->
-			<div class="titlerogo-box">
-				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-						class="header_title_logo"></a>
-			</div>
-			<div class="tel-box">
-				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-						class="tel-box-top"></a>
-				<a href="tel:0120-686-684"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
-						class="tel-box-bottom"></a>
-			</div>
-		</div>
-		<!--固定ヘッダー内のメニューボタン-->
-		<div class="header_inner_menu">
-			<a href="../search/index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
-					class="UI_top_funeral"></a>
-			<a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-					class="UI_top_funeral"></a>
-			<a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
-					class="UI_top_funeral"></a>
-			<a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
-					class="UI_top_funeral"></a>
-			<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
-					class="UI_top_funeral"></a>
-		</div>
-	</header>
+  <header>
+    <div class="header_inner_logo">
+      <!--タイトルロゴの位置-->
+      <div class="titlerogo-box">
+        <a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+            class="header_title_logo"></a>
+      </div>
+      <div class="tel-box">
+        <a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+            class="tel-box-top"></a>
+        <a href="tel:0120-686-684"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
+            class="tel-box-bottom"></a>
+      </div>
+    </div>
+    <!--固定ヘッダー内のメニューボタン-->
+    <div class="header_inner_menu">
+      <a href="../search/index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
+          class="UI_top_funeral"></a>
+      <a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
+          class="UI_top_funeral"></a>
+      <a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
+          class="UI_top_funeral"></a>
+      <a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
+          class="UI_top_funeral"></a>
+      <a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
+          class="UI_top_funeral"></a>
+    </div>
+  </header>
   <!--コンテンツ部分-->
   <!-- ここにトップページの本文を追加していく-->
   <main>
     <!-- お問い合わせフォーム -->
     <div class="info_contact_inner">
       <!-- お問い合わせ内容のインプット -->
-      <div class="from_contact">
-        <!--メール送信用フォーム-->
+      <div class="info_main_inner_box">
+        <div class="info_main_inner_from-Item">
+          <!--メール送信用フォーム-->
           <div class="from-Item">
-              <h3><?php echo $success_text; ?></h3>
+            <h3><?php echo $success_text; ?></h3>
           </div>
-          <div class="from-Item-button">
-            <button onclick="location.href='../../'" class="from-Btn">トップページに戻る</button>
-          </div>
+        </div>
+        <div class="from-Item-button">
+          <button onclick="location.href='../../'" class="from-Btn">トップページに戻る</button>
+        </div>
       </div>
     </div>
 
@@ -88,11 +90,11 @@ if ($success) {
     <footer class="footer">
       <div class="footer_banner">
         <a href="https://www.tojyuin.com/"><img src="../images/footer/bn_01.jpg" alt="東樹院"
-            class="footer_banner_image" width="222*" height="144"></a>
-        <a href="http://www.project-x.co.jp/320003/index.shtml"><img src="../images/footer/bn_02.jpg"
-            alt="昭和セレモニー" class="footer_banner_image" width="222" height="144"></a>
+            class="footer_banner_image"></a>
+        <a href="http://www.project-x.co.jp/320003/index.shtml"><img src="../images/footer/bn_02.jpg" alt="昭和セレモニー"
+            class="footer_banner_image"></a>
         <a href="https://little-emperor.weebly.com/"><img src="../images/footer/bn_03.png" alt="小皇帝合同会社"
-            class="footer_banner_image" width="222" height="144"></a>
+            class="footer_banner_image"></a>
       </div>
       <div class="footer_text">
         <p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
@@ -100,47 +102,4 @@ if ($success) {
     </footer>
   </main>
 
-  <style>
-    main {
-      width: 100%;
-      height: 100%;
-      box-sizing: border-box;
-    }
-    .from_contact
-    {
-      margin-left: 65%;
-    }
-    .info_contact_inner {
-      box-sizing: border-box;
-    }
-
-    .info_main_inner_header_text {
-      box-sizing: border-box;
-    }
-
-    .from-Item {
-      text-align: center;
-      box-sizing: border-box;
-    }
-
-    .from-Item-button {
-      box-sizing: border-box;
-    }
-
-    .from-Item-Label {
-      margin-right: 500px;
-      box-sizing:border-box;
-    }
-    h3
-    {
-      font-size: 25px;
-      box-sizing:border-box;
-    }
-  </style>
-
-  /*
-  if (mb_send_mail($to, $subject, $body, $headers)) {
-  echo "メールを送信しました。ありがとうございました。";
-  } else {
-  echo "HTMLからのPOST送信受信に失敗しました";
-  }*/
+</html>
