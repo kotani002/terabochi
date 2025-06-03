@@ -188,6 +188,7 @@ body {
 .top_main_box {
     width: 100%;
     height: auto;
+    justify-items: center;
 }
 
 
@@ -760,6 +761,85 @@ h2 {
     max-width: 600px;
 }
 
+/*永代供養の説明用ボックス*/
+.eidaikuyou_explanation_box {
+    width: 100%;
+    height: auto;
+    min-width: 100px;
+    min-height: 100px;
+    max-width: 800px;
+    max-height: 700px;
+    background-color: #00a99d;
+    border-radius: 40px;
+    margin: 50px;
+}
+
+.eidaikuyou_explanation_headline_text {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    padding: 30px;
+    text-align: left;
+}
+
+.eidaikuyou_explanation_headline_bottom_text {
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    text-align: left;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    margin-left: 5%;
+}
+
+.eidaikuyou_explanation_text_box {
+    width: 100%;
+    height: auto;
+    justify-items: center;
+}
+
+.eidaikuyou_explanation_price_text_box {
+    width: 100%;
+    height: auto;
+    color: white;
+    font-size: 20px;
+    font-weight: 600;
+    margin: 20px;
+}
+
+.eidaikuyou_explanation_price_text {
+    margin-left: 10%;
+}
+
+.eidaikuyou_explanation_text {
+    color: white;
+    font-size: 18px;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.eidaikuyou_explanation_price_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+
+.eidaikuyou_explanation_price_image_box {
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin-right: 30%;
+    margin-top: 5%;
+    margin-bottom: 5%;
+    gap: 10%;
+}
+
+.eidaikuyou_explanation_image {
+    width: 100%;
+    height: auto;
+    max-width: 200px;
+}
+
 @media screen and (max-width: 480px) {
     .eidaikuyou_box {
         width: 100%;
@@ -773,6 +853,13 @@ h2 {
         width: 100%;
         height: auto;
         max-width: 300px;
+    }
+
+    .eidaikuyou_explanation_image {
+        width: 100%;
+        height: auto;
+        max-width: 100px;
+        max-height: 150px;
     }
 }
 

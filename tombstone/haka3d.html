@@ -11,7 +11,8 @@
 
 <body>
     <div class="iframe-wrapper">
-        <iframe src="unity/index.html" frameborder="0" allowfullscreen>
+        現在ロード中です...<br>しばらくお待ちください...
+        <iframe src="unity/index.html" loading="lazy" scrolling="no" frameborder="0" allowfullscreen>
         </iframe>
     </div>
 
@@ -22,8 +23,9 @@
         }
 
         .iframe-wrapper {
-            height: 100%;
             overflow: hidden;
+            color: white;
+            text-justify: center;
         }
 
         .iframe-wrapper iframe {
