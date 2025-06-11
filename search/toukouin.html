@@ -1,0 +1,139 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
+	<title>寺墓地.COM(ドットコム)</title>
+	<link rel="stylesheet" href="../style.css" />
+</head>
+
+<body>
+	<!--固定ヘッダー部分の作成-->
+	<header>
+		<div class="header_inner_logo">
+			<!--タイトルロゴの位置-->
+			<div class="titlerogo-box">
+				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+						class="header_title_logo"></a>
+			</div>
+			<div class="tel-box">
+				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+						class="tel-box-top"></a>
+				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
+						alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
+
+				<!--ここのJSで端末を判断する-->
+				<script src="platform.js"></script>
+				<script>
+					//端末のosを判断する
+					var os = platform.os.toString().toLowerCase();
+
+					//platform.jsで取得したOSの種類によってリンクの先を変更する
+					if (os.indexOf("android") !== -1 || os.indexOf("ios") !== -1) {
+						Replace();
+					}
+
+					//platform.jsを使用して端末がスマホであることを判断してfunctionを呼ぶ
+					function Replace() {
+						let telLinkNumber = document.getElementById("telLinkNumber");
+						let telNumber = "tel:0120-686-684";
+
+						//href属性の値を書き換える
+						telLinkNumber.setAttribute('href', telNumber);
+					}
+				</script>
+			</div>
+		</div>
+		<!--固定ヘッダー内のメニューボタン-->
+		<div class="header_inner_menu">
+			<a href="../search/index.html"><img src="../images/top/push/UI_top_search_push.svg" alt="寺墓地を探す"
+					class="UI_top_funeral"></a>
+			<a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
+					class="UI_top_funeral"></a>
+			<a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
+					class="UI_top_funeral"></a>
+			<a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
+					class="UI_top_funeral"></a>
+			<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
+					class="UI_top_funeral"></a>
+		</div>
+	</header>
+
+	<!--コンテンツ部分-->
+	<!-- ここにトップページの本文を追加していく-->
+	<main>
+		<div class="top_main_box">
+			<div class="profile-list">
+				<!-- 寺墓地の一覧 -->
+
+				<div class="temple_profile_container">
+					<div class="temple_profile_header">
+						<div class="temple_profile_name_block">
+							<div class="temple_profile_name">東光院</div>
+							<div class="temple_profile_name furigana">〈とうこういん〉</div>
+						</div>
+						<div class="temple_profile_tags">
+							<span class="temple_profile_tag toptag">真言宗 智山派</span>
+							<span class="temple_profile_tag undertag">一般墓</span>
+							<span class="temple_profile_tag undertag">永代供養墓</span>
+							<span class="temple_profile_tag undertag">水子供養</span>
+						</div>
+					</div>
+					<div class="temple_profile_inner_container">
+						<div class="temple_profile_text_container">
+							<div class="temple_profile_main_content">
+								<div class="temple_profile_text_block">
+									<div class="temple_profile_description_large">
+										東急多摩川線・沼部駅より徒歩1分<br>歌にもなった「桜坂」下の名刹
+									</div>
+									<div class="temple_profile_description_small">
+										東急多摩川線・沼部駅の北に位置する東光院（とうこういん）は、真言宗智山派で小杉村最明寺です。山門を入ると正面に新橋色の本堂の屋根がひときわ美しく輝く本尊があるお寺です。
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="temple_profile_image_box">
+							<div class="temple_profile_image_top">
+								<img src="../images/search/toukouin/toukouin_1.png" alt="東光院紹介画像1">
+							</div>
+							<div class="temple_profile_image_row">
+								<img src="../images/search/toukouin/toukouin_2.png" alt="東光院紹介画像2">
+								<img src="../images/search/toukouin/toukouin_3.png" alt="東光院紹介画像3">
+							</div>
+						</div>
+					</div>
+					<div class="temple_profile_contact">
+						<a href="../info/index.html"><img src="../images/common/UI_form_short.svg" alt="お問い合わせはこちら"
+								class="inquiry_image info_button"></a>
+						<p><strong>所在地：</strong> 東京都大田区田園調布本町35-8</p>
+					</div>
+					<div class="temple_profile_map">
+						<iframe
+							src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d811.1955231107896!2d139.67332629999999!3d35.5837699!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0000000000000000%3A0x17ddcc43f187e564!2z5p2x5YWJ6Zmi!5e0!3m2!1sja!2sjp!4v1439264188080"
+							width="700" height="400" frameborder="0" style="border:0" allowfullscreen=""></iframe>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<!--フッター情報欄-->
+		<footer class="footer">
+			<div class="footer_banner">
+				<a href="https://www.tojyuin.com/"><img src="../images/footer/bn_01.jpg" alt="東樹院"
+						class="footer_banner_image"></a>
+				<a href="http://www.project-x.co.jp/320003/index.shtml"><img src="../images/footer/bn_02.jpg"
+						alt="昭和セレモニー" class="footer_banner_image"></a>
+				<a href="https://little-emperor.weebly.com/"><img src="../images/footer/bn_03.png" alt="小皇帝合同会社"
+						class="footer_banner_image"></a>
+			</div>
+			<div class="footer_text">
+				<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
+			</div>
+		</footer>
+	</main>
+</body>
+
+</html>
