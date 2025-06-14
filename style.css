@@ -635,31 +635,6 @@ h2 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.temple_profile_name
-{
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0 0 15px 0;
-    color: #ffce2f;
-}
-
-.temple_profile_tag
-{
-    background: linear-gradient(#00a992, #8afdff);
-    margin: 4px;
-    padding: 5px;
-    font-size: 20px;
-    color: #000000;
-    border-radius: 8px;
-}
-
-.temple_profile_inner_container
-{
-    font-size: 14px;
-    color: #ffffff;
-    margin: 4px 0;
-}
-
 .profile-name {
     font-size: 40px;
     font-weight: bold;
@@ -774,8 +749,7 @@ h2 {
 
 /*永代供養墓*/
 
-.eidaikuyou_top_image_box
-{
+.eidaikuyou_top_image_box {
     margin-top: 5%;
 }
 
@@ -1084,6 +1058,17 @@ h2 {
         font-size: 20px;
         font-size: 20px;
     }
+
+    .temple_profile_container {
+        background-color: #004536;
+        border-radius: 1rem;
+        margin: 2rem auto;
+        padding: 2rem;
+        width: 85%;
+        max-width: 1200px;
+        border: 2px solid #002f3a;
+        color: white;
+    }
 }
 
 .description-button {
@@ -1098,18 +1083,199 @@ h3 {
     font-size: 14px;
 }
 
-.temple_profile_container
-{
-    display: table;
-    justify-content: center;
+.temple_profile_name_block {
+    display: flex;
+    align-items: baseline;
+}
+
+.temple_profile_container {
+    background-color: #004536;
+    border-radius: 1rem;
+    margin: 2rem auto;
+    padding: 2rem;
+    width: 80%;
+    max-width: 1200px;
     border: 2px solid #002f3a;
-    border-radius: 8px;
-    margin: 20px auto;
-    padding: 10px;
-    width: 100%;
-    height: auto;
-    max-width: 80%;
-    background-color: #00432ee9;
-    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
     color: white;
+}
+
+.temple_profile_header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.temple_profile_name {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #ffef57;
+}
+
+.furigana {
+    font-size: 1.3rem;
+    color: #ffef57;
+}
+
+.temple_profile_tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.temple_profile_tag {
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+    border-radius: 8px;
+}
+
+.toptag {
+    background-color: #ffe66d;
+    color: #000;
+}
+
+.undertag {
+    background: linear-gradient(#adfff4, #2ee6d9);
+    color: #000;
+}
+
+.temple_profile_inner_container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 1.5rem;
+    gap: 2rem;
+    border-bottom: 1px solid white;
+}
+
+.temple_profile_text_container {
+    flex: 1 1 300px;
+}
+
+.temple_profile_description_large {
+    font-size: 1.6rem;
+    color: #ffef57;
+    font-weight: bold;
+}
+
+.temple_profile_description_small {
+    margin-top: 1.5rem;
+    font-size: 1.2rem;
+    color: white;
+}
+
+.temple_profile_image_box {
+    flex: 1 1 300px;
+    text-align: center;
+}
+
+.temple_profile_image_top img,
+.temple_profile_image_row img {
+    width: 100%;
+    margin-bottom: 1rem;
+}
+
+.temple_profile_image_row {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.temple_profile_image_row img {
+    width: 48%;
+}
+
+.temple_profile_contact {
+    font-size: 1.5rem;
+    padding: 1rem;
+    border-radius: 1rem;
+}
+
+.info_button {
+    width: 100%;
+    max-width: 350px;
+    display: block;
+    margin: 1 auto 1rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.temple_profile_map iframe {
+    width: 100%;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.temple_profile_contact a {
+    color: #ffef57;
+    text-decoration: underline;
+}
+
+@media screen and (max-width: 480px) {
+
+    .temple_profile_container {
+        padding: 1rem;
+        width: 85%;
+    }
+
+    .temple_profile_header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .temple_profile_tags {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+    }
+
+    .temple_profile_inner_container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .temple_profile_image_box {
+        text-align: center;
+    }
+
+    .temple_profile_image_row {
+        flex-direction: column;
+    }
+
+    .temple_profile_image_row img {
+        width: 100%;
+    }
+
+    .info_button {
+        width: 100%;
+    }
+
+    .temple_profile_map iframe {
+        height: 300px;
+    }
+
+    .temple_profile_contact {
+        font-size: 1rem;
+    }
+
+    .temple_profile_name {
+        font-size: 3rem;
+        font-weight: bold;
+        color: #ffef57;
+    }
+
+    .furigana {
+        font-size: 1.2rem;
+        color: #ffef57;
+    }
+
+    .temple_profile_name_block {
+        display: flex;
+        align-items: baseline;
+        margin-bottom: 1rem;
+        /* 名前とふりがなの文字の下線を揃える */
+    }
 }
