@@ -635,31 +635,6 @@ h2 {
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
 }
 
-.temple_profile_name
-{
-    font-size: 40px;
-    font-weight: bold;
-    margin: 0 0 15px 0;
-    color: #ffce2f;
-}
-
-.temple_profile_tag
-{
-    background: linear-gradient(#00a992, #8afdff);
-    margin: 4px;
-    padding: 5px;
-    font-size: 20px;
-    color: #000000;
-    border-radius: 8px;
-}
-
-.temple_profile_inner_container
-{
-    font-size: 14px;
-    color: #ffffff;
-    margin: 4px 0;
-}
-
 .profile-name {
     font-size: 40px;
     font-weight: bold;
@@ -1100,8 +1075,6 @@ h3 {
 
 .temple_profile_container
 {
-    display: table;
-    justify-content: center;
     border: 2px solid #002f3a;
     border-radius: 8px;
     margin: 20px auto;
@@ -1111,5 +1084,4 @@ h3 {
     max-width: 80%;
     background-color: #00432ee9;
     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    color: white;
 }
