@@ -749,6 +749,11 @@ h2 {
 
 /*永代供養墓*/
 
+.eidaikuyou_top_image_box
+{
+    margin-top: 5%;
+}
+
 .eidaikuyou_box {
     width: 100%;
     height: auto;
