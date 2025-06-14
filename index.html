@@ -75,6 +75,7 @@
 					<input type="radio" name="slide" id="slide3">
 					<input type="radio" name="slide" id="slide4">
 					<input type="radio" name="slide" id="slide5">
+					<input type="radio" name="slide" id="slide6">
 
 					<!-- 表示するスライド -->
 					<div class="slides">
@@ -85,6 +86,7 @@
 								class="slide slide3"></a></div>
 						<div class="slide"><a href="search/toukouin.html" class="slide slide4"></a></div>
 						<div class="slide"><a href="search/hourenji.html" class="slide slide5"></a></div>
+						<div class="slide"><a href="search/kakusyouji.html" class="slide slide6"></a></div>
 					</div>
 
 					<!-- ナビゲーション -->
@@ -94,6 +96,7 @@
 						<label for="slide3" class="bar"></label>
 						<label for="slide4" class="bar"></label>
 						<label for="slide5" class="bar"></label>
+						<label for="slide6" class="bar"></label>
 					</div>
 
 					<!-- 左右ボタン -->
@@ -104,7 +107,7 @@
 
 			<!-- javascriptで左右ボタンでスライド切り替え() -->
 			<script>
-				const totalSlides = 5;
+				const totalSlides = 6;
 				const prevBtn = document.querySelector('.nav-button.prev');
 				const nextBtn = document.querySelector('.nav-button.next');
 				let currentIndex = 1;
@@ -152,9 +155,9 @@
 					const diff = endX - startX;
 					if (Math.abs(diff) > 50) {
 						if (diff > 0) {
-							goToSlide(currentIndex - 1);
+							goToSlide(getCurrentSlideIndex() - 1);
 						} else {
-							goToSlide(currentIndex + 1);
+							goToSlide(getCurrentSlideIndex() + 1);
 						}
 					}
 				}
@@ -169,7 +172,7 @@
 
 				// 自動再生（5000ミリ(5秒)）
 				let autoPlayInterval = setInterval(() => {
-					goToSlide(currentIndex + 1);
+					goToSlide(getCurrentSlideIndex() + 1);
 				}, 5000);
 			</script>
 

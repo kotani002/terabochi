@@ -279,6 +279,9 @@ body {
 .slide5 {
     background-image: url(images/news/hourenji/tokyo06.jpg);
 }
+.slide6 {
+    background-image: url(images/news/kakusyouji/tokyo09.jpg);
+}
 
 .nav-button {
     position: absolute;
@@ -349,13 +352,18 @@ input[type="radio"] {
 #slide5:checked~.slides {
     transform: translateX(-400%);
 }
+#slide6:checked~.slides {
+    transform: translateX(-500%);
+}
 
 /* 選択中のドットの色を変更 */
 #slide1:checked~.navigation label[for="slide1"],
 #slide2:checked~.navigation label[for="slide2"],
 #slide3:checked~.navigation label[for="slide3"],
 #slide4:checked~.navigation label[for="slide4"],
-#slide5:checked~.navigation label[for="slide5"] {
+#slide5:checked~.navigation label[for="slide5"],
+#slide6:checked~.navigation label[for="slide6"] 
+{
     background: rgb(252, 255, 45);
     ;
 }
