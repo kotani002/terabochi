@@ -771,8 +771,7 @@ h2 {
     height: auto;
     min-width: 100px;
     min-height: 100px;
-    max-width: 800px;
-    max-height: 700px;
+    max-width: 90%;
     background-color: #00a99d;
     border-radius: 40px;
     margin: 50px;
@@ -1210,9 +1209,22 @@ h3 {
     margin-top: 2rem;
 }
 
-.temple_profile_contact a {
-    color: #ffef57;
-    text-decoration: underline;
+.temple_profile_homepage
+{
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.temple_profile_button {
+    background-color: #ffef57;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 30px;
+    padding-right: 30px;
+    border-radius: 1rem;
+    color: black;
+    font-weight: bold;
+
 }
 
 @media screen and (max-width: 480px) {

@@ -17,30 +17,31 @@
 			<!--タイトルロゴの位置-->
 			<div class="titlerogo-box">
 				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-						class="header_title_logo"></a>
+						class="header_title_logo">
+				</a>
 			</div>
 			<div class="tel-box">
-					<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-							class="tel-box-top"></a>
+				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
+						class="tel-box-top"></a>
 
-					<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
-							alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
+				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
+						alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
 
-					<!--ここのJSで端末を判断する-->
-					<script>
-						if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-							Replace();
-						}
+				<!--ここのJSで端末を判断する-->
+				<script>
+					if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+						Replace();
+					}
 
-						function Replace() {
-							let telLinkNumber = document.getElementById("telLinkNumber");
-							let telNumber = "tel:0120-686-684";
+					function Replace() {
+						let telLinkNumber = document.getElementById("telLinkNumber");
+						let telNumber = "tel:0120-686-684";
 
-							//href属性の値を書き換える
-							telLinkNumber.setAttribute('href', telNumber);
-						}
-					</script>
-				</div>
+						//href属性の値を書き換える
+						telLinkNumber.setAttribute('href', telNumber);
+					}
+				</script>
+			</div>
 		</div>
 		<!--固定ヘッダー内のメニューボタン-->
 		<div class="header_inner_menu">
@@ -67,10 +68,10 @@
 					<a href="haka3d.html" target="_blank" class="model-view">
 						<div class="description-button">
 							<img src="../images/tombstone/UI_3dmodel_button.svg" alt="3Dモデルを表示" class="inquiry_image">
-							</div>
+						</div>
 					</a>
-					<div class="stone_title_text">墓石の種類</div>
 				</div>
+				<div class="stone_title_text">墓石の種類</div>
 
 				<div class="description-box">
 					<div class="description-image-box">
