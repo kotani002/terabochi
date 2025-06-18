@@ -785,10 +785,12 @@ h2 {
     border-radius: 40px;
     left: 0;
     margin-left: 5%;
+    padding-bottom: 5%;
 }
 
 .eidaikuyou_explanation_center_box {
     text-align: center;
+    margin-bottom: 5%;
 }
 
 .eidaikuyou_explanation_headline_text {
@@ -822,6 +824,7 @@ h2 {
     font-size: 20px;
     font-weight: 600;
     margin: 20px;
+    max-width: 500px;
 }
 
 .eidaikuyou_explanation_price_text {
@@ -845,7 +848,6 @@ h2 {
     width: 100%;
     height: auto;
     display: flex;
-    margin-right: 30%;
     margin-top: 5%;
     margin-bottom: 5%;
     gap: 10%;
