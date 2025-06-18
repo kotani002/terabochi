@@ -279,6 +279,7 @@ body {
 .slide5 {
     background-image: url(images/news/hourenji/tokyo06.jpg);
 }
+
 .slide6 {
     background-image: url(images/news/kakusyouji/tokyo09.jpg);
 }
@@ -352,6 +353,7 @@ input[type="radio"] {
 #slide5:checked~.slides {
     transform: translateX(-400%);
 }
+
 #slide6:checked~.slides {
     transform: translateX(-500%);
 }
@@ -362,8 +364,7 @@ input[type="radio"] {
 #slide3:checked~.navigation label[for="slide3"],
 #slide4:checked~.navigation label[for="slide4"],
 #slide5:checked~.navigation label[for="slide5"],
-#slide6:checked~.navigation label[for="slide6"] 
-{
+#slide6:checked~.navigation label[for="slide6"] {
     background: rgb(252, 255, 45);
     ;
 }
@@ -780,11 +781,10 @@ h2 {
     height: auto;
     min-width: 100px;
     min-height: 100px;
-    max-width: 90%;
+    max-width: 1000px;
     background-color: #00a99d;
     border-radius: 40px;
     left: 0;
-    margin-left: 5%;
     padding-bottom: 5%;
 }
 
@@ -795,10 +795,10 @@ h2 {
 
 .eidaikuyou_explanation_headline_text {
     color: white;
-    font-size: 40px;
+    font-size: 4vw;
     font-weight: bold;
     padding: 30px;
-    text-align: left;
+    text-align: center;
 }
 
 .eidaikuyou_explanation_headline_bottom_text {
@@ -821,7 +821,7 @@ h2 {
     width: 100%;
     height: auto;
     color: white;
-    font-size: 20px;
+    font-size: 1.8vw;
     font-weight: 600;
     margin: 20px;
     max-width: 500px;
@@ -881,6 +881,37 @@ h2 {
         max-width: 100px;
         max-height: 150px;
     }
+
+    .eidaikuyou_explanation_box {
+        width: 100%;
+        height: auto;
+        min-width: 100px;
+        min-height: 100px;
+        max-width: 90%;
+        background-color: #00a99d;
+        border-radius: 40px;
+        left: 0;
+        margin-left: 5%;
+        padding-bottom: 5%;
+    }
+
+    .eidaikuyou_explanation_price_text_box {
+        width: 100%;
+        height: auto;
+        color: white;
+        font-size: 20px;
+        font-weight: 600;
+        margin: 20px;
+        max-width: 500px;
+    }
+
+    .eidaikuyou_explanation_headline_text {
+    color: white;
+    font-size: calc(1.5vw + 2rem);
+    font-weight: bold;
+    padding: 30px;
+    text-align: center;
+}
 }
 
 /*葬儀*/
