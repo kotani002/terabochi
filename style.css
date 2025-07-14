@@ -479,6 +479,9 @@ input[type="radio"] {
 /*注意書きを表示させる*/
 .top_attention
 {
+    text-align: center;
+    align-content: center;
+    margin:auto;
     width: 85%;
     height: auto;
 }
