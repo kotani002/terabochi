@@ -6,8 +6,11 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
+	<meta name="description"
+		content="“寺墓地ドットコム”は、関東圏、特に東京都の城南・城西地区に特化した、お寺・墓地探しのプロフェッショナルです。葬儀のことや墓石のことでお困りの方は、お気軽にご連絡下さい。" />
 	<title>寺墓地.COM(ドットコム)</title>
 	<link rel="stylesheet" href="style.css" />
+	<script src="js/TopPageLanguage.js"></script>
 </head>
 
 <body>
@@ -16,12 +19,34 @@
 		<div class="header_inner_logo">
 			<!--タイトルロゴの位置-->
 			<div class="titlerogo-box">
-				<a href="index.html"><img src="images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-						class="header_title_logo"></a>
+				<a href="index.html"><img src="images/top/top_titlerogo2.svg" alt="タイトルロゴ" class="header_title_logo"
+						id="header_title_logo_image"></a>
 			</div>
+			<!--ヘッダーの右側に配置しているオブジェクト-->
 			<div class="tel-box">
-				<a href="info/index.html"><img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-						class="tel-box-top"></a>
+				<div class="change-language-box">
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-ja">日本語</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-en">English</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-zh">中文</a>
+				</div>
+
+				<script>
+					document.getElementById("language-change-ja").onclick = function () {
+						changeLanguage("ja");
+					}
+
+					document.getElementById("language-change-en").onclick = function () {
+						changeLanguage("en");
+					}
+
+					document.getElementById("language-change-zh").onclick = function () {
+						changeLanguage("zh");
+					}
+				</script>
+
+				<a href="info/index.html">
+					<img src="images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top" id="tel_box_top_image">
+				</a>
 
 				<a href="info/index.html" id="telLinkNumber"><img src="images/top/top_tel2.svg" alt="電話番号:0120-686-684"
 						class="tel-box-bottom"></a>
@@ -31,7 +56,7 @@
 					if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
 						Replace();
 					}
-					
+
 					function Replace() {
 						let telLinkNumber = document.getElementById("telLinkNumber");
 						let telNumber = "tel:0120-686-684";
@@ -44,15 +69,21 @@
 		</div>
 		<!--固定ヘッダー内のメニューボタン-->
 		<div class="header_inner_menu">
-			<a href="search\index.html"><img src="images/top/UI_top_search.svg" alt="寺墓地を探す" class="UI_top_funeral"></a>
-			<a href="eidaikuyou\index.html"><img src="images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-					class="UI_top_funeral"></a>
-			<a href="funeralservice\index.html"><img src="images/top/UI_top_funeral.svg" alt="葬儀"
-					class="UI_top_funeral"></a>
-			<a href="moving\index.html"><img src="images/top/UI_top_moving.svg" alt="お墓の引っ越し"
-					class="UI_top_funeral"></a>
-			<a href="tombstone\index.html"><img src="images/top/UI_top_tombstone.svg" alt="墓石"
-					class="UI_top_funeral"></a>
+			<a href="search\index.html">
+				<img src="images/top/UI_top_search.svg" alt="寺墓地を探す" class="UI_top_funeral" id="menu_search">
+			</a>
+			<a href="eidaikuyou\index.html">
+				<img src="images/top/UI_top_eidaikuyou.svg" alt="永代供養墓" class="UI_top_funeral" id="menu_eidaikuyou">
+			</a>
+			<a href="funeralservice\index.html">
+				<img src="images/top/UI_top_funeral.svg" alt="葬儀" class="UI_top_funeral" id="menu_funeral">
+			</a>
+			<a href="moving\index.html">
+				<img src="images/top/UI_top_moving.svg" alt="お墓の引っ越し" class="UI_top_funeral" id="menu_moving">
+			</a>
+			<a href="tombstone/index.html"><img src="images/top/UI_top_tombstone.svg" alt="墓石" class="UI_top_funeral"
+					id="menu_tombstone">
+			</a>
 		</div>
 	</header>
 
@@ -60,10 +91,17 @@
 	<!-- ここにトップページの本文を追加していく-->
 	<main>
 		<div class="top_main_box">
+
+			<!--海外の場合はここに注意書きを表示させる-->
+			<div class="top_attention">
+				<img src="images/localize/en/image_Cautionary_en.svg"
+						class="cautionary_en" id="top_attention">
+			</div>
+
 			<!--トップ画面の最上部に表示されるバナー-->
 			<div class="top_banner">
 				<a href="funeralservice\index.html"><img src="images/top/UI_funeral_process.svg" alt="葬儀の流れはこちら"
-						class="UI_funeral_process"></a>
+						class="UI_funeral_process" id="top_banner"></a>
 			</div>
 
 			<!--カルーセルエリア-->
@@ -82,8 +120,7 @@
 						<div class="slide"><a href="search/toujyuin.html" class="slide slide1"></a></div>
 						<div class="slide"><a href="search/iouji.html" class="slide slide2"></a>
 						</div>
-						<div class="slide"><a href="search/tokyo/enkouji.php"
-								class="slide slide3"></a></div>
+						<div class="slide"><a href="search/tokyo/enkouji.php" class="slide slide3"></a></div>
 						<div class="slide"><a href="search/toukouin.html" class="slide slide4"></a></div>
 						<div class="slide"><a href="search/hourenji.html" class="slide slide5"></a></div>
 						<div class="slide"><a href="search/kakusyouji.html" class="slide slide6"></a></div>
@@ -176,7 +213,7 @@
 				}, 5000);
 			</script>
 
-			<H2><b>―― 新着情報 ――</b></H2>
+			<H2 id="latest_news"><b>―― 新着情報 ――</b></H2>
 
 			<section class="top_news_section">
 				<div class="top_news_section_inner">
@@ -188,7 +225,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="toukouin_2025_4_description">
 									東光院墓地及び永代供養墓<br>イベント中
 								</p>
 							</div>
@@ -205,7 +242,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="toujyuin_2025_4_description">
 									東樹院墓地及び永代供養墓<br>イベント中
 								</p>
 							</div>
@@ -222,7 +259,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="iouji_2025_4_description">
 									医王寺墓地及び永代供養墓<br>イベント中
 								</p>
 							</div>
@@ -239,7 +276,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="enkoji_2025_4_description">
 									円光寺墓地<br>イベント中
 								</p>
 							</div>
@@ -256,7 +293,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="toujyuin_2022_1_description">
 									東樹院<br>イベント中
 								</p>
 							</div>
@@ -273,7 +310,7 @@
 									height="200">
 							</div>
 							<div class="news_description">
-								<p>
+								<p id="iouji_2022_1_description">
 									医王寺　深沢供養塔<br>イベント中
 								</p>
 							</div>
@@ -301,10 +338,13 @@
 						class="footer_banner_image"></a>
 			</div>
 			<div class="footer_text">
-				<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
+				<p id="copyright">Copyright © 2025 新星会合同会社 All Rights Reserved designed</p>
 			</div>
 		</footer>
 	</main>
 </body>
+<script>
+	LanguageCheck();
+</script>
 
 </html>
