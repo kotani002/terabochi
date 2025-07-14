@@ -173,7 +173,9 @@ function changeLanguage(lang) {
 
     const inquiry_image = document.getElementById("inquiry_image");
     inquiry_image.src = t.inquiry_image;
-
+    value = String(lang);
+    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
+    sessionStorage.setItem('SelectLanguage', value);
     /*言語毎に使用フォントの切り替えのフォントに変換する */
     switch(lang)
     {
@@ -187,11 +189,6 @@ function changeLanguage(lang) {
             document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC';
             return;
     }
-
-    value = String(lang);
-
-    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
-    sessionStorage.setItem('SelectLanguage', value);
 }
 
 /*ページを変更した時は一度この処理を呼び言語変更を有効化する*/
