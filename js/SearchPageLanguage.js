@@ -65,32 +65,32 @@ const translations = {
         /*ボディ内容のデータ*/
         toujyuin_card_title_text: "Toju-in",
         toujyuin_card_description_text: "A temple in Kawasaki enshrining the Seven Lucky Gods and Bishamonten. A space where you can feel close to your ancestors and the bonds.",
-        toujyuin_card_address_text: "Location： 1-11-1 Miyauchi, Nakahara-ku, Kawasaki-shi, Kanagawa, Japan<br>Perpetual usage fee： From JPY800,000",
+        toujyuin_card_address_text: "Location： 1-11-1 Miyauchi, Nakahara-ku, Kawasaki-shi, Kanagawa, Japan<br>Perpetual usage fee： 800,000yen and up",
         toujyuin_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
 
         kakusyouji_card_title_text: "Kakusho-ji",
         kakusyouji_card_description_text: "Founded in 1947 A Jodo Shinshu Takada sect temple in Togoshi, Shinagawa Ward.",
-        kakusyouji_card_address_text: "Location： 6-2-3 Togoshi, Shinagawa-ku, Tokyo, Japan<br>Perpetual usage fee： From JPY1,500,000",
+        kakusyouji_card_address_text: "Location： 6-2-3 Togoshi, Shinagawa-ku, Tokyo, Japan<br>Perpetual usage fee： 1,500,000yen and up",
         kakusyouji_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
 
         hourenji_card_title_text: "Horenji",
         hourenji_card_description_text: "A Nichiren sect temple in Hatanodai, Shinagawa Ward. Right in front of Ebaramachi Station ticket gate on Tokyu Oimachi Line.",
-        hourenji_card_address_text: "Location：  3-6-18 Hatanodai, Shinagawa-ku, Tokyo, Japan<br>Perpetual usage fee： From JPY600,000",
+        hourenji_card_address_text: "Location：  3-6-18 Hatanodai, Shinagawa-ku, Tokyo, Japan<br>Perpetual usage fee： 600,000yen and up",
         hourenji_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
 
         toukouin_card_title_text: "Toko-in",
         toukouin_card_description_text: "A famous temple just a 1-minute walk from Numabe Station on the Tokyu Tamagawa Line, located beneath the “Sakurazaka” made famous in song.",
-        toukouin_card_address_text: "Location：  35-8 Denenchofu-honcho, Ota-ku, Tokyo, Japan<br>Perpetual usage fee： From JPY1,200,000",
+        toukouin_card_address_text: "Location：  35-8 Denenchofu-honcho, Ota-ku, Tokyo, Japan<br>Perpetual usage fee： 1,200,000yen and up",
         toukouin_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
 
         iouji_card_title_text: "Io-ji",
         iouji_card_description_text: "A charming temple cemetery located in a prime area of Fukazawa, Setagaya Ward.",
-        iouji_card_address_text: "Location：  6-14-2 Fukazawa, Setagaya-ku, Tokyo, Japan<br>Perpetual usage fee： From JPY800,000",
+        iouji_card_address_text: "Location：  6-14-2 Fukazawa, Setagaya-ku, Tokyo, Japan<br>Perpetual usage fee： 800,000yen and up",
         iouji_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
 
         enkouji_card_title_text: "Enkouji",
         enkouji_card_description_text: "A cemetery surrounded by rich greenery in a quiet residential area of Setagaya Ward.",
-        enkouji_card_address_text: "Location：  2-2-1 Okura, Setagaya-ku, Tokyo, Japan<br>Perpetual usage fee： From JPY1,700,000",
+        enkouji_card_address_text: "Location：  2-2-1 Okura, Setagaya-ku, Tokyo, Japan<br>Perpetual usage fee： 1,700,000yen and up",
         enkouji_card_UI_check: "../images/localize/en/button/UI_check_en.svg",
         inquiry_image:"../images/localize/en/button/UI_inquiry_en.svg",
 
@@ -167,43 +167,9 @@ function changeLanguage(lang) {
     menu_funeral.src = t.menu_funeral;
     menu_moving.src = t.menu_moving;
     menu_tombstone.src = t.menu_tombstone;
+    document.getElementById("copyright").innerHTML = t.copyright;
 
     /*ボディ内容変更*/
-    document.getElementById("toujyuin_card_title_text").innerHTML = t.toujyuin_card_title_text;
-    document.getElementById("toujyuin_card_description_text").innerHTML = t.toujyuin_card_description_text;
-    document.getElementById("toujyuin_card_address_text").innerHTML = t.toujyuin_card_address_text;
-    const toujyuin_card_UI_check = document.getElementById("toujyuin_card_UI_check");
-    toujyuin_card_UI_check.src = t.toujyuin_card_UI_check;
-
-    document.getElementById("kakusyouji_card_title_text").innerHTML = t.kakusyouji_card_title_text;
-    document.getElementById("kakusyouji_card_description_text").innerHTML = t.kakusyouji_card_description_text;
-    document.getElementById("kakusyouji_card_address_text").innerHTML = t.kakusyouji_card_address_text;
-    const kakusyouji_card_UI_check = document.getElementById("kakusyouji_card_UI_check");
-    kakusyouji_card_UI_check.src = t.kakusyouji_card_UI_check;
-
-    document.getElementById("hourenji_card_title_text").innerHTML = t.hourenji_card_title_text;
-    document.getElementById("hourenji_card_description_text").innerHTML = t.hourenji_card_description_text;
-    document.getElementById("hourenji_card_address_text").innerHTML = t.hourenji_card_address_text;
-    const hourenji_card_UI_check = document.getElementById("hourenji_card_UI_check");
-    hourenji_card_UI_check.src = t.hourenji_card_UI_check;
-
-    document.getElementById("toukouin_card_title_text").innerHTML = t.toukouin_card_title_text;
-    document.getElementById("toukouin_card_description_text").innerHTML = t.toukouin_card_description_text;
-    document.getElementById("toukouin_card_address_text").innerHTML = t.toukouin_card_address_text;
-    const toukouin_card_UI_check = document.getElementById("toukouin_card_UI_check");
-    toukouin_card_UI_check.src = t.toukouin_card_UI_check;
-
-    document.getElementById("iouji_card_title_text").innerHTML = t.iouji_card_title_text;
-    document.getElementById("iouji_card_description_text").innerHTML = t.iouji_card_description_text;
-    document.getElementById("iouji_card_address_text").innerHTML = t.iouji_card_address_text;
-    const iouji_card_UI_check = document.getElementById("iouji_card_UI_check");
-    iouji_card_UI_check.src = t.iouji_card_UI_check;
-
-    document.getElementById("enkouji_card_title_text").innerHTML = t.enkouji_card_title_text;
-    document.getElementById("enkouji_card_description_text").innerHTML = t.enkouji_card_description_text;
-    document.getElementById("enkouji_card_address_text").innerHTML = t.enkouji_card_address_text;
-    const enkouji_card_UI_check = document.getElementById("enkouji_card_UI_check");
-    enkouji_card_UI_check.src = t.enkouji_card_UI_check;
 
     const inquiry_image = document.getElementById("inquiry_image");
     inquiry_image.src = t.inquiry_image;
@@ -218,7 +184,7 @@ function changeLanguage(lang) {
             return;
         //中文用にfontを変更
         case "zh":
-            document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC',sans-serif;
+            document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC';
             return;
     }
 
