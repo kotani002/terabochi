@@ -48,6 +48,23 @@ const translations = {
     /*中国語のローカライズ用データ*/
     zh: {
         header_title_logo_image: "images/localize/zh/top/rogo2_zh.svg",
+        tel_box_top_image: "images/localize/zh/top/image_tel_zh.svg",
+        menu_search: "images/localize/zh/top/UI_search_zh.svg",
+        menu_eidaikuyou: "images/localize/zh/top/UI_eidaikuyou_zh.svg",
+        menu_funeral: "images/localize/zh/top/UI_funeral_zh.svg",
+        menu_moving: "images/localize/zh/top/UI_moving_zh.svg",
+        menu_tombstone: "images/localize/zh/top/UI_tombstone_zh.svg",
+        top_banner: "images/localize/zh/button/UI_funeral_process_zh.svg",
+        top_attention:"images/localize/zh/image_Cautionary_zh.svg",
+
+        latest_news: "―― 最新消息 ――",
+        toukouin_2025_4_description: "东光院墓地及永代供养墓 活动进行中",
+        toujyuin_2025_4_description: "东树院墓地及永代供养墓 活动进行中",
+        iouji_2025_4_description: "医王寺墓地及永代供养墓 活动进行中",
+        enkoji_2025_4_description: "圆光寺墓地 活动进行中",
+        toujyuin_2022_1_description: "东树院墓地 活动进行中",
+        iouji_2022_1_description: "医王寺墓地 活动进行中",
+        copyright: "版权所有 © 2025 新星会有限责任公司。保留所有权利。",
     }
 };
 
