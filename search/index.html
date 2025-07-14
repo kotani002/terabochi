@@ -4,10 +4,15 @@
 
 <head>
 	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
+	<meta name="description"
+		content="“寺墓地ドットコム”は、関東圏、特に東京都の城南・城西地区に特化した、お寺・墓地探しのプロフェッショナルです。葬儀のことや墓石のことでお困りの方は、お気軽にご連絡下さい。" />
 	<title>寺墓地.COM(ドットコム)</title>
 	<link rel="stylesheet" href="../style.css" />
+	<!--中文用のフォント-->
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans SC' rel='stylesheet'>
+	<script src="../js/SearchPageLanguage.js"></script>
 </head>
 
 <body>
@@ -17,14 +22,37 @@
 			<!--タイトルロゴの位置-->
 			<div class="titlerogo-box">
 				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-						class="header_title_logo"></a>
+						class="header_title_logo" id="header_title_logo_image"></a>
 			</div>
+			<!--ヘッダーの右側に配置しているオブジェクト-->
 			<div class="tel-box">
-				<a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-						class="tel-box-top"></a>
+				<div class="change-language-box">
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-ja">日本語</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-en">English</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-zh">中文</a>
+				</div>
 
-				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
-						class="tel-box-bottom"></a>
+				<script>
+					document.getElementById("language-change-ja").onclick = function () {
+						changeLanguage("ja");
+					}
+
+					document.getElementById("language-change-en").onclick = function () {
+						changeLanguage("en");
+					}
+
+					document.getElementById("language-change-zh").onclick = function () {
+						changeLanguage("zh");
+					}
+				</script>
+
+				<a href="../info/index.html">
+					<img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top"
+						id="tel_box_top_image">
+				</a>
+
+				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
+						alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
 
 				<!--ここのJSで端末を判断する-->
 				<script>
@@ -44,107 +72,123 @@
 		</div>
 		<!--固定ヘッダー内のメニューボタン-->
 		<div class="header_inner_menu">
-			<a href="../search/index.html"><img src="../images/top/push/UI_top_search_push.svg" alt="寺墓地を探す"
-					class="UI_top_funeral"></a>
-			<a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-					class="UI_top_funeral"></a>
-			<a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
-					class="UI_top_funeral"></a>
-			<a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
-					class="UI_top_funeral"></a>
+			<a href="../search\index.html">
+				<img src="../images/top/push/UI_top_search_push.svg" alt="寺墓地を探す" class="UI_top_funeral" id="menu_search">
+			</a>
+			<a href="../eidaikuyou\index.html">
+				<img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓" class="UI_top_funeral" id="menu_eidaikuyou">
+			</a>
+			<a href="../funeralservice\index.html">
+				<img src="../images/top/UI_top_funeral.svg" alt="葬儀" class="UI_top_funeral" id="menu_funeral">
+			</a>
+			<a href="../moving\index.html">
+				<img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し" class="UI_top_funeral" id="menu_moving">
+			</a>
 			<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
-					class="UI_top_funeral"></a>
+					class="UI_top_funeral" id="menu_tombstone">
+			</a>
 		</div>
 	</header>
 
 	<!--コンテンツ部分-->
 	<!-- ここにトップページの本文を追加していく-->
 	<main>
-		<div class="top_main_box">
+		<div class="top_main_box" id="top_main_box">
 			<div class="profile-list">
 				<!-- 寺墓地の一覧 -->
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/toujyuin/toujyuin01.jpg" alt="画像" class="profile-image">
+						<img src="../images/news/toujyuin/toujyuin01.jpg" alt="東樹院画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">東樹院</p>
-							<p class="profile-description">川崎の七福神・毘沙門天を祀る寺院<br>ご先祖様を身近に感じる<br>「つながり」の空間があります。</p>
-							<p class="profile-address">所在地： 神奈川県川崎市中原区宮内1-11-1<br>永代使用料： 80万円～
+							<p class="profile-name" id="toujyuin_card_title_text">東樹院</p>
+							<p class="profile-description" id="toujyuin_card_description_text">
+								川崎の七福神・毘沙門天を祀る寺院<br>ご先祖様を身近に感じる<br>「つながり」の空間があります。</p>
+							<p class="profile-address" id="toujyuin_card_address_text">所在地： 神奈川県川崎市中原区宮内1-11-1<br>永代使用料：
+								80万円～
 							</p>
-							<a href="../search/toujyuin.html"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<a href="../search/toujyuin.html"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="toujyuin_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/kakusyouji/tokyo09.jpg" alt="画像" class="profile-image">
+						<img src="../images/news/kakusyouji/tokyo09.jpg" alt="覺證寺画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">覺證寺</p>
-							<p class="profile-description">昭和22年に開創<br>品川区戸越にある真宗高田派寺院</p>
-							<p class="profile-address">所在地：東京都品川区戸越6-2-3<br>永代使用料： 150万円～
+							<p class="profile-name" id="kakusyouji_card_title_text">覺證寺</p>
+							<p class="profile-description" id="kakusyouji_card_description_text">
+								昭和22年に開創<br>品川区戸越にある真宗高田派寺院</p>
+							<p class="profile-address" id="kakusyouji_card_address_text">所在地：東京都品川区戸越6-2-3<br>永代使用料：
+								150万円～
 
 							</p>
-							<a href="../search/kakusyouji.html"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<a href="../search/kakusyouji.html"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="kakusyouji_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/hourenji/tokyo06.jpg" alt="画像" class="profile-image">
+						<img src="../images/news/hourenji/tokyo06.jpg" alt="法蓮寺画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">法蓮寺</p>
-							<p class="profile-description">品川区旗の台にある日蓮宗寺院、<br>東急大井町線・荏原町駅改札出て目の前</p>
-							<p class="profile-address">所在地： 東京都品川区旗の台3-6-18<br>永代使用料： 60万円～
+							<p class="profile-name" id="hourenji_card_title_text">法蓮寺</p>
+							<p class="profile-description" id="hourenji_card_description_text">
+								品川区旗の台にある日蓮宗寺院、<br>東急大井町線・荏原町駅改札出て目の前</p>
+							<p class="profile-address" id="hourenji_card_address_text">所在地： 東京都品川区旗の台3-6-18<br>永代使用料：
+								60万円～
 							</p>
-							<a href="../search/hourenji.html"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<a href="../search/hourenji.html"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="hourenji_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/toukouin/toukouin.png" alt="画像" class="profile-image">
+						<img src="../images/news/toukouin/toukouin.png" alt="東光院画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">東光院</p>
-							<p class="profile-description">東急多摩川線・沼部駅より徒歩1分、<br>歌にもなった「桜坂」下の名刹</p>
-							<p class="profile-address">所在地： 東京都大田区田園調布本町35-8<br>永代使用料： 120万円～
+							<p class="profile-name" id="toukouin_card_title_text">東光院</p>
+							<p class="profile-description" id="toukouin_card_description_text">
+								東急多摩川線・沼部駅より徒歩1分、<br>歌にもなった「桜坂」下の名刹</p>
+							<p class="profile-address" id="toukouin_card_address_text">所在地： 東京都大田区田園調布本町35-8<br>永代使用料：
+								120万円～
 							</p>
-							<a href="../search/toukouin.html"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<a href="../search/toukouin.html"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="toukouin_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/iouji/iouji01.jpg" alt="画像" class="profile-image">
+						<img src="../images/news/iouji/iouji01.jpg" alt="医王寺画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">医王寺</p>
-							<p class="profile-description">世田谷区深沢の一等地に<br>佇む趣のある寺院墓所</p>
-							<p class="profile-address">所在地： 東京都世田谷区深沢6-14-2<br>永代使用料： 80万円～
+							<p class="profile-name" id="iouji_card_title_text">医王寺</p>
+							<p class="profile-description" id="iouji_card_description_text">世田谷区深沢の一等地に<br>佇む趣のある寺院墓所
 							</p>
-							<a href="../search/iouji.html"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<p class="profile-address" id="iouji_card_address_text">所在地： 東京都世田谷区深沢6-14-2<br>永代使用料： 80万円～
+							</p>
+							<a href="../search/iouji.html"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="iouji_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
 
 				<div class="profile-card">
 					<div class="profile-content">
-						<img src="../images/news/enkouji/enkouji01.jpg" alt="画像" class="profile-image">
+						<img src="../images/news/enkouji/enkouji01.jpg" alt="円光寺画像" class="profile-image">
 						<div class="profile-details">
-							<p class="profile-name">円光寺</p>
-							<p class="profile-description">世田谷区の静かな住宅地にある<br>自然豊かな緑に囲まれた墓地です。</p>
-							<p class="profile-address">所在地： 東京都世田谷区大蔵2丁目2-1<br>永代使用料： 170万円～
+							<p class="profile-name" id="enkouji_card_title_text">円光寺</p>
+							<p class="profile-description" id="enkouji_card_description_text">
+								世田谷区の静かな住宅地にある<br>自然豊かな緑に囲まれた墓地です。</p>
+							<p class="profile-address" id="enkouji_card_address_text">所在地： 東京都世田谷区大蔵2丁目2-1<br>永代使用料：
+								170万円～
 							</p>
-							<a href="tokyo/enkouji.php"><img src="../images/common/UI_check.svg"
-									alt="詳細を確認する" class = "inquiry_image check_button"></a>
+							<a href="tokyo/enkouji.php"><img src="../images/common/UI_check.svg" alt="詳細を確認する"
+									class="inquiry_image check_button" id="enkouji_card_UI_check"></a>
 						</div>
 					</div>
 				</div>
@@ -153,7 +197,7 @@
 
 			<div class="inquiry_box">
 				<a href="../info/index.html">
-					<img src="../images/common/UI_inquiry.svg" alt="お申込み・お問い合わせはこちら" class="inquiry_image">
+					<img src="../images/common/UI_inquiry.svg" alt="お申込み・お問い合わせはこちら" class="inquiry_image" id="inquiry_image">
 				</a>
 			</div>
 		</div>
@@ -168,10 +212,13 @@
 						class="footer_banner_image"></a>
 			</div>
 			<div class="footer_text">
-				<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
+				<p id="copyright">Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
 			</div>
 		</footer>
 	</main>
 </body>
+<script>
+	LanguageCheck();
+</script>
 
 </html>
