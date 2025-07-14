@@ -8,7 +8,7 @@ const translations = {
         /*共通ヘッダー*/
         header_title_logo_image: "../images/top/top_titlerogo2.svg",
         tel_box_top_image: "../images/top/top_tel1.svg",
-        menu_search: "../images/top/UI_top_search.svg",
+        menu_search: "../images/top/push/UI_top_search_push.svg",
         menu_eidaikuyou: "../images/top/UI_top_eidaikuyou.svg",
         menu_funeral: "../images/top/UI_top_funeral.svg",
         menu_moving: "../images/top/UI_top_moving.svg",
@@ -54,7 +54,7 @@ const translations = {
         /*共通ヘッダー*/
         header_title_logo_image: "../images/localize/en/top/rogo2_en.svg",
         tel_box_top_image: "../images/localize/en/top/image_tel_en.svg",
-        menu_search: "../images/localize/en/top/UI_search_en.svg",
+        menu_search: "../images/localize/en/top/UI_search_push_en.svg",
         menu_eidaikuyou: "../images/localize/en/top/UI_eidaikuyou_en.svg",
         menu_funeral: "../images/localize/en/top/UI_funeral_en.svg",
         menu_moving: "../images/localize/en/top/UI_moving_en.svg",
@@ -100,7 +100,7 @@ const translations = {
         /*共通ヘッダー*/
         header_title_logo_image: "../images/localize/zh/top/rogo2_zh.svg",
         tel_box_top_image: "../images/localize/zh/top/image_tel_zh.svg",
-        menu_search: "../images/localize/zh/top/UI_search_zh.svg",
+        menu_search: "../images/localize/zh/top/UI_search_push_zh.svg",
         menu_eidaikuyou: "../images/localize/zh/top/UI_eidaikuyou_zh.svg",
         menu_funeral: "../images/localize/zh/top/UI_funeral_zh.svg",
         menu_moving: "../images/localize/zh/top/UI_moving_zh.svg",

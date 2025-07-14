@@ -12,7 +12,7 @@ const translations = {
         menu_eidaikuyou: "../images/top/UI_top_eidaikuyou.svg",
         menu_funeral: "../images/top/UI_top_funeral.svg",
         menu_moving: "../images/top/UI_top_moving.svg",
-        menu_tombstone: "../images/top/UI_top_tombstone.svg",
+        menu_tombstone: "../images/top/push/UI_top_tombstone_push.svg",
         /*共通フッダー*/
         copyright: "Copyright © 2025 新星会合同会社 All Rights Reserved designed",
 
@@ -35,7 +35,7 @@ const translations = {
         menu_eidaikuyou: "../images/localize/en/top/UI_eidaikuyou_en.svg",
         menu_funeral: "../images/localize/en/top/UI_funeral_en.svg",
         menu_moving: "../images/localize/en/top/UI_moving_en.svg",
-        menu_tombstone: "../images/localize/en/top/UI_tombstone_en.svg",
+        menu_tombstone: "../images/localize/en/top/UI_tombstone_push_en.svg",
         /*共通フッダー*/
         copyright: "Copyright © 2025 Shinseikai LLC. All Rights Reserved",
 
@@ -58,7 +58,7 @@ const translations = {
         menu_eidaikuyou: "../images/localize/zh/top/UI_eidaikuyou_zh.svg",
         menu_funeral: "../images/localize/zh/top/UI_funeral_zh.svg",
         menu_moving: "../images/localize/zh/top/UI_moving_zh.svg",
-        menu_tombstone: "../images/localize/zh/top/UI_tombstone_zh.svg",
+        menu_tombstone: "../images/localize/zh/top/UI_tombstone_push_zh.svg",
         /*共通フッダー*/
         copyright: "版权所有 © 2025 新星会有限责任公司。保留所有权利。",
 
