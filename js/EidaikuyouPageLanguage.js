@@ -117,8 +117,9 @@ function changeLanguage(lang) {
     document.getElementById("eidaikuyou_explanation_text").innerHTML = t.eidaikuyou_explanation_text;
     document.getElementById("eidaikuyou_explanation_headline_bottom_text").innerHTML = t.eidaikuyou_explanation_headline_bottom_text;
     document.getElementById("eidaikuyou_explanation_price_text").innerHTML = t.eidaikuyou_explanation_price_text;
-
-
+    value = String(lang);
+    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
+    sessionStorage.setItem('SelectLanguage', value);
     /*言語毎に使用フォントの切り替えのフォントに変換する */
     switch (lang) {
         //日本語、英語用フォントに変更
@@ -131,11 +132,6 @@ function changeLanguage(lang) {
             document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC';
             return;
     }
-
-    value = String(lang);
-
-    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
-    sessionStorage.setItem('SelectLanguage', value);
 }
 
 /*ページを変更した時は一度この処理を呼び言語変更を有効化する*/

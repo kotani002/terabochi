@@ -106,6 +106,12 @@ function changeLanguage(lang) {
     top_banner.src = t.top_banner;
     top_attention.src = t.top_attention;
 
+    value = String(lang);
+
+    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
+    sessionStorage.setItem('SelectLanguage',value);
+    console.log(sessionStorage);
+
     /*言語毎に使用フォントの切り替えのフォントに変換する */
     switch(lang)
     {
@@ -116,14 +122,9 @@ function changeLanguage(lang) {
             return;
         //中文用にfontを変更
         case "zh":
-            document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC',sans-serif;
+            document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC';
             return;
     }
-
-    value = String(lang);
-
-    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
-    sessionStorage.setItem('SelectLanguage',value);
 }
 
 /*ページを変更した時は一度この処理を呼び言語変更を有効化する*/
@@ -132,6 +133,7 @@ function LanguageCheck() {
     var storageItem = sessionStorage.getItem('SelectLanguage');
     if(storageItem != null)
     {
+        console.log(storageItem);
         SelectLanguage = storageItem;
     }
     changeLanguage(SelectLanguage);

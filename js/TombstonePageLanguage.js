@@ -111,6 +111,9 @@ function changeLanguage(lang) {
     document.getElementById("japanese_stone_description").innerHTML = t.japanese_stone_description;
     document.getElementById("western_stone_title").innerHTML = t.western_stone_title;
     document.getElementById("western_stone_description").innerHTML = t.western_stone_description;
+    value = String(lang);
+    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
+    sessionStorage.setItem('SelectLanguage', value);
 
     /*言語毎に使用フォントの切り替えのフォントに変換する */
     switch (lang) {
@@ -124,11 +127,6 @@ function changeLanguage(lang) {
             document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC';
             return;
     }
-
-    value = String(lang);
-
-    /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
-    sessionStorage.setItem('SelectLanguage', value);
 }
 
 /*ページを変更した時は一度この処理を呼び言語変更を有効化する*/
