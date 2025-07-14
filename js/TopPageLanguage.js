@@ -105,6 +105,21 @@ function changeLanguage(lang) {
     menu_tombstone.src = t.menu_tombstone;
     top_banner.src = t.top_banner;
     top_attention.src = t.top_attention;
+
+    /*言語毎に使用フォントの切り替えのフォントに変換する */
+    switch(lang)
+    {
+        //日本語、英語用フォントに変更
+        case "en":
+        case "jp":
+            document.getElementById("top_main_box").style.fontFamily = 'sans-serif';
+            return;
+        //中文用にfontを変更
+        case "zh":
+            document.getElementById("top_main_box").style.fontFamily = 'Noto Sans SC',sans-serif;
+            return;
+    }
+
     value = String(lang);
 
     /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
