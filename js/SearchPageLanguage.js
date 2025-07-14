@@ -170,6 +170,41 @@ function changeLanguage(lang) {
     document.getElementById("copyright").innerHTML = t.copyright;
 
     /*ボディ内容変更*/
+    document.getElementById("toujyuin_card_title_text").innerHTML = t.toujyuin_card_title_text;
+    document.getElementById("toujyuin_card_description_text").innerHTML = t.toujyuin_card_description_text;
+    document.getElementById("toujyuin_card_address_text").innerHTML = t.toujyuin_card_address_text;
+    const toujyuin_card_UI_check = document.getElementById("toujyuin_card_UI_check");
+    toujyuin_card_UI_check.src = t.toujyuin_card_UI_check;
+
+    document.getElementById("kakusyouji_card_title_text").innerHTML = t.kakusyouji_card_title_text;
+    document.getElementById("kakusyouji_card_description_text").innerHTML = t.kakusyouji_card_description_text;
+    document.getElementById("kakusyouji_card_address_text").innerHTML = t.kakusyouji_card_address_text;
+    const kakusyouji_card_UI_check = document.getElementById("kakusyouji_card_UI_check");
+    kakusyouji_card_UI_check.src = t.kakusyouji_card_UI_check;
+
+    document.getElementById("hourenji_card_title_text").innerHTML = t.hourenji_card_title_text;
+    document.getElementById("hourenji_card_description_text").innerHTML = t.hourenji_card_description_text;
+    document.getElementById("hourenji_card_address_text").innerHTML = t.hourenji_card_address_text;
+    const hourenji_card_UI_check = document.getElementById("hourenji_card_UI_check");
+    hourenji_card_UI_check.src = t.hourenji_card_UI_check;
+
+    document.getElementById("toukouin_card_title_text").innerHTML = t.toukouin_card_title_text;
+    document.getElementById("toukouin_card_description_text").innerHTML = t.toukouin_card_description_text;
+    document.getElementById("toukouin_card_address_text").innerHTML = t.toukouin_card_address_text;
+    const toukouin_card_UI_check = document.getElementById("toukouin_card_UI_check");
+    toukouin_card_UI_check.src = t.toukouin_card_UI_check;
+
+    document.getElementById("iouji_card_title_text").innerHTML = t.iouji_card_title_text;
+    document.getElementById("iouji_card_description_text").innerHTML = t.iouji_card_description_text;
+    document.getElementById("iouji_card_address_text").innerHTML = t.iouji_card_address_text;
+    const iouji_card_UI_check = document.getElementById("iouji_card_UI_check");
+    iouji_card_UI_check.src = t.iouji_card_UI_check;
+
+    document.getElementById("enkouji_card_title_text").innerHTML = t.enkouji_card_title_text;
+    document.getElementById("enkouji_card_description_text").innerHTML = t.enkouji_card_description_text;
+    document.getElementById("enkouji_card_address_text").innerHTML = t.enkouji_card_address_text;
+    const enkouji_card_UI_check = document.getElementById("enkouji_card_UI_check");
+    enkouji_card_UI_check.src = t.enkouji_card_UI_check;
 
     const inquiry_image = document.getElementById("inquiry_image");
     inquiry_image.src = t.inquiry_image;
