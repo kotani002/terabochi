@@ -111,7 +111,7 @@ function changeLanguage(lang) {
         top_attention.style.display = 'none'; // 要素を非表示にする
     }else
     {
-        top_attention.style.display = 'block'; // 要素を非表示にする
+        top_attention.style.display = 'block'; // 要素を表示にする
     }
 
     value = String(lang);
