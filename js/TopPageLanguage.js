@@ -106,6 +106,14 @@ function changeLanguage(lang) {
     top_banner.src = t.top_banner;
     top_attention.src = t.top_attention;
 
+    if(lang == "ja")
+    {
+        top_attention.style.display = 'none'; // 要素を非表示にする
+    }else
+    {
+        top_attention.style.display = 'block'; // 要素を非表示にする
+    }
+
     value = String(lang);
 
     /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
