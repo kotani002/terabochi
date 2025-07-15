@@ -20,7 +20,7 @@ const translations = {
         info_title_text: "お問い合わせフォーム",
         message_title_text: "ご相談内容",
         message_title: "例）墓石の価格について",
-        message_name: "必須 お名前",
+        message_name: "お名前",
         name: "例）山田太郎",
         message_name_furigana: "フリガナ",
         name_furigana: "例）ヤマダタロウ",
@@ -50,21 +50,21 @@ const translations = {
 
         /*ボディ内容のデータ*/
         info_title_text: "Contact Us",
-        message_title_text: "ご相談内容",
-        message_title: "例）墓石の価格について",
-        message_name: "お名前",
-        name: "例）山田太郎",
-        message_name_furigana: "フリガナ",
-        name_furigana: "例）ヤマダタロウ",
-        message_tel: "ご連絡先電話番号",
+        message_title_text: "Details of Your Inquiry",
+        message_title: "Example: About the Price of Gravestones",
+        message_name: "Name",
+        name: "Example: Taro Yamada",
+        message_name_furigana: "Pronunciation Guide",
+        name_furigana: "Example: YAMADA TARO",
+        message_tel: "Contact Phone Number",
         tel: "例）123-4567-7890",
-        message_email: "メールアドレス",
-        email: "メールアドレス",
-        message_timezone: "ご連絡希望時間帯",
-        timezone: "例）10時から19時",
-        message_inner: "お問い合わせ内容",
+        message_email: "Email Address",
+        email: "Email Address",
+        message_timezone: "Preferred Contact Time",
+        timezone: "Example: 10:00 AM to 7:00 PM",
+        message_inner: "Inquiry Message",
         message: "",
-        from_Btn: "入力内容の確認",
+        from_Btn: "Review Your Input",
         must: "Required",
     },
     /*中国語のローカライズ用データ*/
@@ -81,23 +81,23 @@ const translations = {
         copyright: "版权所有 © 2025 新星会有限责任公司。保留所有权利。",
 
         /*ボディ内容のデータ*/
-        info_title_text: "お問い合わせフォーム",
-        message_title_text: "ご相談内容",
-        message_title: "例）墓石の価格について",
-        message_name: "お名前",
-        name: "例）山田太郎",
-        message_name_furigana: "フリガナ",
+        info_title_text: "联系我们",
+        message_title_text: "问题详情",
+        message_title: "例）关于墓碑价格",
+        message_name: "姓名",
+        name: "例）关于墓碑价格",
+        message_name_furigana: "假名注音",
         name_furigana: "例）ヤマダタロウ",
-        message_tel: "ご連絡先電話番号",
+        message_tel: "联系电话号码",
         tel: "例）123-4567-7890",
-        message_email: "メールアドレス",
-        email: "メールアドレス",
-        message_timezone: "ご連絡希望時間帯",
-        timezone: "例）10時から19時",
-        message_inner: "お問い合わせ内容",
+        message_email: "电子邮箱地址",
+        email: "电子邮箱地址",
+        message_timezone: "希望联系时间段",
+        timezone: "例）上午10点到下午7点",
+        message_inner: "咨询内容",
         message: "",
-        from_Btn: "入力内容の確認",
-        must: "必須",
+        from_Btn: "确认输入内容",
+        must: "必填",
     }
 };
 
@@ -126,20 +126,36 @@ function changeLanguage(lang) {
     menu_moving.src = t.menu_moving;
     menu_tombstone.src = t.menu_tombstone;
     document.getElementById("copyright").innerHTML = t.copyright;
-    
+
 
     /*ボディ内容のデータ*/
     document.getElementById("info_title_text").innerText = t.info_title_text;
     document.getElementById("message_title_text").innerText = t.message_title_text;
     document.getElementById("message_title").placeholder = t.message_title;
-    const must = document.getElementById("must1");
-    must.innerText = t.must;
 
-    document.getElementById("message_name").innerHTML = must.innerHTML + t.message_name;
+    //中身を一度空に変更
+    document.getElementById("message_name").innerHTML = "";
+
+    //必須の文字をspanで囲んだ後に文言に追加
+    const spans = document.createElement("span");
+    //spanタグで囲いたいテキストの追加
+    spans.textContent = t.must;
+    //適用したいcssクラスの付与
+    spans.classList.add("from-Item-Label-Required");
+    //適用させたい要素の子供に作ったspanの追加
+    document.getElementById("message_name").appendChild(spans);
+    //必須タグの後ろに追加したタグの追加
+    document.getElementById("message_name").innerHTML += t.message_name;
+
     document.getElementById("name").placeholder = t.name;
-    document.getElementById("message_name_furigana").innerHTML = t.message_name_furigana;
-    document.getElementById("name_furigana").placeholder = t.name_furigana;
-    document.getElementById("message_tel").innerHTML = t.message_tel;
+
+    document.getElementById("message_name_furigana").innerHTML = "";
+    document.getElementById("message_name_furigana").appendChild(spans);
+    document.getElementById("message_name_furigana").innerHTML += t.message_name_furigana;
+
+    document.getElementById("message_tel").innerHTML = "";
+    document.getElementById("message_tel").appendChild(spans);
+    document.getElementById("message_tel").innerHTML += t.message_tel;
     document.getElementById("tel").placeholder = t.tel;
     document.getElementById("message_email").innerHTML = t.message_email;
     document.getElementById("email").placeholder = t.tel;
