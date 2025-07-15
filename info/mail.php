@@ -30,59 +30,92 @@ if ($success) {
 ?>
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, user-scalable=yes, maximum-scale=1.0, minimum-scale=1.0">
-  <meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
-  <title>寺墓地.COM(ドットコム)</title>
-  <link rel="stylesheet" href="../style.css" />
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
+	<meta name="description"
+		content="“寺墓地ドットコム”は、関東圏、特に東京都の城南・城西地区に特化した、お寺・墓地探しのプロフェッショナルです。葬儀のことや墓石のことでお困りの方は、お気軽にご連絡下さい。" />
+	<title>寺墓地.COM(ドットコム)</title>
+	<link rel="stylesheet" href="../style.css" />
+	<!--中文用のフォント-->
+	<link href='https://fonts.googleapis.com/css?family=Noto Sans SC' rel='stylesheet'>
+	<script src="../js/MovingPageLanguage.js"></script>
 </head>
 
 <body>
-  <!--固定ヘッダー部分の作成-->
-  <header>
-    <div class="header_inner_logo">
-      <!--タイトルロゴの位置-->
-      <div class="titlerogo-box">
-        <a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
-            class="header_title_logo"></a>
-      </div>
-      <div class="tel-box">
-        <a href="../info/index.html"><img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで"
-            class="tel-box-top"></a>
+	<!--固定ヘッダー部分の作成-->
+	<header>
+		<div class="header_inner_logo">
+			<!--タイトルロゴの位置-->
+			<div class="titlerogo-box">
+				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+						class="header_title_logo" id="header_title_logo_image"></a>
+			</div>
+			<!--ヘッダーの右側に配置しているオブジェクト-->
+			<div class="tel-box">
+				<div class="change-language-box">
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-ja">日本語</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-en">English</a>
+					<a href="javascript:void(0);" class="language-change-button" id="language-change-zh">中文</a>
+				</div>
 
-        <a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg" alt="電話番号:0120-686-684"
-            class="tel-box-bottom"></a>
+				<script>
+					document.getElementById("language-change-ja").onclick = function () {
+						changeLanguage("ja");
+					}
 
-        <!--ここのJSで端末を判断する-->
-        <script>
-          if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
-            Replace();
-          }
+					document.getElementById("language-change-en").onclick = function () {
+						changeLanguage("en");
+					}
 
-          function Replace() {
-            let telLinkNumber = document.getElementById("telLinkNumber");
-            let telNumber = "tel:0120-686-684";
+					document.getElementById("language-change-zh").onclick = function () {
+						changeLanguage("zh");
+					}
+				</script>
 
-            //href属性の値を書き換える
-            telLinkNumber.setAttribute('href', telNumber);
-          }
-        </script>
-      </div>
-    </div>
-    <!--固定ヘッダー内のメニューボタン-->
-    <div class="header_inner_menu">
-      <a href="../search/index.html"><img src="../images/top/UI_top_search.svg" alt="寺墓地を探す"
-          class="UI_top_funeral"></a>
-      <a href="../eidaikuyou/index.html"><img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓"
-          class="UI_top_funeral"></a>
-      <a href="../funeralservice/index.html"><img src="../images/top/UI_top_funeral.svg" alt="葬儀"
-          class="UI_top_funeral"></a>
-      <a href="../moving/index.html"><img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し"
-          class="UI_top_funeral"></a>
-      <a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
-          class="UI_top_funeral"></a>
-    </div>
-  </header>
+				<a href="../info/index.html">
+					<img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top"
+						id="tel_box_top_image">
+				</a>
+
+				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
+						alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
+
+				<!--ここのJSで端末を判断する-->
+				<script>
+					if (navigator.userAgent.indexOf('iPhone') > 0 || navigator.userAgent.indexOf('iPod') > 0 || navigator.userAgent.indexOf('Android') > 0) {
+						Replace();
+					}
+
+					function Replace() {
+						let telLinkNumber = document.getElementById("telLinkNumber");
+						let telNumber = "tel:0120-686-684";
+
+						//href属性の値を書き換える
+						telLinkNumber.setAttribute('href', telNumber);
+					}
+				</script>
+			</div>
+		</div>
+		<!--固定ヘッダー内のメニューボタン-->
+		<div class="header_inner_menu">
+			<a href="../search\index.html">
+				<img src="../images/top/UI_top_search.svg" alt="寺墓地を探す" class="UI_top_funeral" id="menu_search">
+			</a>
+			<a href="../eidaikuyou\index.html">
+				<img src="../images/top/UI_top_eidaikuyou.svg" alt="永代供養墓" class="UI_top_funeral" id="menu_eidaikuyou">
+			</a>
+			<a href="../funeralservice\index.html">
+				<img src="../images/top/UI_top_funeral.svg" alt="葬儀" class="UI_top_funeral" id="menu_funeral">
+			</a>
+			<a href="../moving\index.html">
+				<img src="../images/top/UI_top_moving.svg" alt="お墓の引っ越し" class="UI_top_funeral" id="menu_moving">
+			</a>
+			<a href="../tombstone/index.html"><img src="../images/top/UI_top_tombstone.svg" alt="墓石"
+					class="UI_top_funeral" id="menu_tombstone">
+			</a>
+		</div>
+	</header>
   <!--コンテンツ部分-->
   <!-- ここにトップページの本文を追加していく-->
   <main>
