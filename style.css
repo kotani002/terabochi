@@ -1290,6 +1290,7 @@ h3 {
 
 .temple_profile_button {
     background-color: #ffef57;
+    width: auto;
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 30px;
@@ -1297,7 +1298,6 @@ h3 {
     border-radius: 1rem;
     color: black;
     font-weight: bold;
-
 }
 
 @media screen and (max-width: 480px) {

@@ -53,7 +53,7 @@ const translations = {
         profile_description:"A charming temple cemetery located in a prime area of Fukazawa, Setagaya Ward.",
         profile_description_small:"Io-ji Temple in Fukazawa, Setagaya Ward, Tokyo, is a Shingon Chizan sect temple adjacent to Fukazawa Fudoson.",
         info_button:"../images/localize/en/button/UI_form_short_en.svg",
-        profile_weblink_button:"Io-ji　Visit our webpage here",
+        profile_weblink_button:"Io-ji webpage",
         profile_location:"<strong>Location：</strong> 6-14-2 Fukazawa, Setagaya-ku, Tokyo, Japan",
     },
     /*中国語のローカライズ用データ*/

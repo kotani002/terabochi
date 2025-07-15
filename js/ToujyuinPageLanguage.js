@@ -53,7 +53,7 @@ const translations = {
         profile_description:"A temple in Kawasaki enshrining the Seven Lucky Gods and Bishamonten. A space where you can feel close to your ancestors and the bonds.",
         profile_description_small:"Daieizan Tojuin Tamonji, located in Nakahara Ward, Kawasaki, is a temple enshrining Kawasaki’s Seven Lucky Gods and Bishamonten.The vermilion tiled gate, symbolizing warding off evil and inviting good fortune, is a landmark. The principal deity is Fudo Myo-o. The temple also offers perpetual graves and memorials for miscarried children (Kosodate Mizuko Jizo).",
         info_button:"../images/localize/en/button/UI_form_short_en.svg",
-        profile_weblink_button:"Toju-in　Visit our webpage here",
+        profile_weblink_button:"Toju-in webpage",
         profile_location:"<strong>Location：</strong> 1-11-1 Miyauchi, Nakahara-ku, Kawasaki-shi, Kanagawa, Japan(Next to 7-Eleven Miyauchi 1-chome Store)",
     },
     /*中国語のローカライズ用データ*/

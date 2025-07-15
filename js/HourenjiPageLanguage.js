@@ -51,7 +51,7 @@ const translations = {
         profile_description:"A Nichiren sect temple in Hatanodai, Shinagawa Ward.Right in front of Ebaramachi Station ticket gate on Tokyu Oimachi Line.",
         profile_description_small:"Horenji Temple stands right in front of the Ebaramachi Station ticket gate (Tokyu Oimachi Line, Oimachi direction) with easy access. Every October, the temple is lively with worshippers carrying lanterns and drums for the annual Oeshiki festival. It is also known for enshrining Ebisu, one of the Seven Lucky Gods of Ebara, attracting many believers.",
         info_button:"../images/localize/en/button/UI_form_short_en.svg",
-        profile_weblink_button:"Horenji　Visit our webpage here",
+        profile_weblink_button:"Horenji webpage",
         profile_location:"<strong>Location：</strong> 3-6-18 Hatanodai, Shinagawa-ku, Tokyo, Japan",
     },
     /*中国語のローカライズ用データ*/
