@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../../style.css" />
 	<!--中文用のフォント-->
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans SC' rel='stylesheet'>
-	<script src="../../js/MovingPageLanguage.js"></script>
+	<script src="../../js/ContactPageLanguage.js"></script>
 </head>
 
 <body>
@@ -93,16 +93,16 @@
 	<!--コンテンツ部分-->
 	<!-- ここにトップページの本文を追加していく-->
 	<main>
-		<div class="info_main_inner">
+		<div class="info_main_inner" id="top_main_box">
 			<!-- お問い合わせフォーム -->
 			<div class="info_main_inner_box">
 				<h2>
-					<div class="info_main_inner_header_text">メールが送信されました。</div>
+					<div class="info_main_inner_header_text" id = info_main_inner_header_text>メールが送信されました。</div>
 				</h2>
 				<!-- お問い合わせ内容のインプット -->
 				<div class="from">
 					<!--メール送信用フォーム-->
-					<button onclick="location.href='../../'" class="from-Btn">トップページに戻る</button>
+					<button onclick="location.href='../../'" class="from-Btn" id = "from_Btn_back">トップページに戻る</button>
 				</div>
 			</div>
 
@@ -116,7 +116,7 @@
 					<a href="https://little-emperor.weebly.com/"><img src="../../images/footer/bn_03.png" alt="小皇帝合同会社"
 							class="footer_banner_image" width="222" height="144"></a>
 				</div>
-				<div class="footer_text">
+				<div class="footer_text" id="copyright">
 					<p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
 				</div>
 			</footer>

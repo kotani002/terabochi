@@ -95,6 +95,7 @@ function changeLanguage(lang) {
     document.getElementById("toujyuin_2022_1_description").innerHTML = t.toujyuin_2025_4_description;
     document.getElementById("iouji_2022_1_description").innerHTML = t.iouji_2025_4_description;
     document.getElementById("copyright").innerHTML = t.copyright;
+    const top_text = document.getElementById("top_text");
 
     img.src = t.header_title_logo_image;
     info.src = t.tel_box_top_image;
@@ -109,9 +110,11 @@ function changeLanguage(lang) {
     if(lang == "ja")
     {
         top_attention.style.display = 'none'; // 要素を非表示にする
+        top_text.style.display ='block';
     }else
     {
         top_attention.style.display = 'block'; // 要素を表示にする
+        top_text.style.display = 'none';
     }
 
     value = String(lang);
@@ -125,7 +128,7 @@ function changeLanguage(lang) {
     {
         //日本語、英語用フォントに変更
         case "en":
-        case "jp":
+        case "ja":
             document.getElementById("top_main_box").style.fontFamily = 'sans-serif';
             return;
         //中文用にfontを変更

@@ -474,6 +474,16 @@ input[type="radio"] {
     padding-top: 10px;
     display: flex;
     justify-content: center;
+    color: #ffce2f;
+    font-weight: bold;
+    font-size: 1rem;
+}
+.top_text{
+    margin: 3%;
+}
+
+.top_banner img {
+    width: 400px;
 }
 
 /*注意書きを表示させる*/

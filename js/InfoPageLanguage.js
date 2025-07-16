@@ -27,7 +27,7 @@ const translations = {
         message_tel: "ご連絡先電話番号",
         tel: "例）123-4567-7890",
         message_email: "メールアドレス",
-        email: "メールアドレス",
+        email: "test@gmail.com",
         message_timezone: "ご連絡希望時間帯",
         timezone: "例）10時から19時",
         message_inner: "お問い合わせ内容",
@@ -59,7 +59,7 @@ const translations = {
         message_tel: "Contact Phone Number",
         tel: "例）123-4567-7890",
         message_email: "Email Address",
-        email: "Email Address",
+        email: "test@gmail.com",
         message_timezone: "Preferred Contact Time",
         timezone: "Example: 10:00 AM to 7:00 PM",
         message_inner: "Inquiry Message",
@@ -91,7 +91,7 @@ const translations = {
         message_tel: "联系电话号码",
         tel: "例）123-4567-7890",
         message_email: "电子邮箱地址",
-        email: "电子邮箱地址",
+        email: "test@gmail.com",
         message_timezone: "希望联系时间段",
         timezone: "例）上午10点到下午7点",
         message_inner: "咨询内容",
@@ -158,7 +158,7 @@ function changeLanguage(lang) {
     document.getElementById("message_tel").innerHTML += t.message_tel;
     document.getElementById("tel").placeholder = t.tel;
     document.getElementById("message_email").innerHTML = t.message_email;
-    document.getElementById("email").placeholder = t.tel;
+    document.getElementById("email").placeholder = t.email;
     document.getElementById("message_timezone").innerHTML = t.message_timezone;
     document.getElementById("timezone").placeholder = t.timezone;
     document.getElementById("message_inner").innerHTML = t.message_inner;
@@ -173,7 +173,7 @@ function changeLanguage(lang) {
     switch (lang) {
         //日本語、英語用フォントに変更
         case "en":
-        case "jp":
+        case "ja":
             document.getElementById("top_main_box").style.fontFamily = 'sans-serif';
             return;
         //中文用にfontを変更

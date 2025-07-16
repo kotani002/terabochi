@@ -12,7 +12,7 @@
 	<link rel="stylesheet" href="../style.css" />
 	<!--中文用のフォント-->
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans SC' rel='stylesheet'>
-	<script src="../js/MovingPageLanguage.js"></script>
+	<script src="../js/ContactPageLanguage .js"></script>
 </head>
 
 <body>
@@ -93,11 +93,11 @@
 	<!--コンテンツ部分-->
 	<!-- ここにトップページの本文を追加していく-->
 	<main>
-		<div class="info_main_inner">
+		<div class="info_main_inner" id="top_main_box">
 			<!-- お問い合わせフォーム -->
 			<div class="info_main_inner_box">
 				<h2>
-					<div class="info_main_inner_header_text">お問い合わせフォーム</div>
+					<div class="info_main_inner_header_text" id="info_title_text">お問い合わせフォーム</div>
 				</h2>
 				<!-- お問い合わせ内容のインプット -->
 				<div class="from">
@@ -105,14 +105,14 @@
 					<form method="POST" action="contact.php">
 						<div class="from-Item">
 							<p class="from-Item-Label">ご相談内容 $_POST['name']</p>
-							<p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>お名前</p>
-							<p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>フリガナ</p>
+							<p class="from-Item-Label" id = "message_name"><span class="from-Item-Label-Required">必須</span>お名前</p>
+							<p class="from-Item-Label" id = "message_name_furigana"><span class="from-Item-Label-Required">必須</span>フリガナ</p>
 
-							<p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>ご連絡先電話番号</p>
+							<p class="from-Item-Label" id = "message_tel"><span class="from-Item-Label-Required">必須</span>ご連絡先電話番号</p>
 
-							<p class="from-Item-Label">メールアドレス</p>
+							<p class="from-Item-Label" id="tel">メールアドレス</p>
 
-							<p class="from-Item-Label">ご連絡希望時間帯</p>
+							<p class="from-Item-Label" id="message_timezone">ご連絡希望時間帯</p>
 
 							<p class="from-Item-Label isMsg">お問い合わせ内容</p>
 

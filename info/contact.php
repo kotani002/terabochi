@@ -27,7 +27,7 @@ $headers = "From: " . $email;
 	<link rel="stylesheet" href="../style.css" />
 	<!--中文用のフォント-->
 	<link href='https://fonts.googleapis.com/css?family=Noto Sans SC' rel='stylesheet'>
-	<script src="../js/MovingPageLanguage.js"></script>
+	<script src="../js/ContactPageLanguage.js"></script>
 </head>
 
 <body>
@@ -112,26 +112,26 @@ $headers = "From: " . $email;
       <!-- お問い合わせフォーム -->
       <div class="info_main_inner_box">
         <h2>
-          <div class="info_main_inner_header_text">メール内容確認</div>
+          <div class="info_main_inner_header_text" id="info_title_text">メール内容確認</div>
         </h2>
         <!-- お問い合わせ内容のインプット -->
         <div class="from">
           <!--メール送信用フォーム-->
           <form method="POST" action="mail.php">
             <div class="from-Item">
-              <p class="from-Item-Label">ご相談内容</p>
+              <p class="from-Item-Label" id="message_title_text">ご相談内容</p>
               <div class="from-Item-element"><?php echo $subject; ?></div>
-              <p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>お名前</p>
+              <p class="from-Item-Label" id="message_name"><span class="from-Item-Label-Required">必須</span>お名前</p>
               <div class="from-Item-element"><?php echo $name; ?></div>
-              <p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>フリガナ</p>
+              <p class="from-Item-Label" id="message_name_furigana"><span class="from-Item-Label-Required">必須</span>フリガナ</p>
               <div class="from-Item-element"><?php echo $name_furigana; ?></div>
-              <p class="from-Item-Label"><span class="from-Item-Label-Required">必須</span>ご連絡先電話番号</p>
+              <p class="from-Item-Label" id="message_tel"><span class="from-Item-Label-Required">必須</span>ご連絡先電話番号</p>
               <div class="from-Item-element"><?php echo $tel; ?></div>
-              <p class="from-Item-Label">メールアドレス</p>
+              <p class="from-Item-Label" id="message_email">メールアドレス</p>
               <div class="from-Item-element"><?php echo $email; ?></div>
-              <p class="from-Item-Label">ご連絡希望時間帯</p>
+              <p class="from-Item-Label" id="message_timezone">ご連絡希望時間帯</p>
               <div class="from-Item-element" name="timezone"><?php echo $timezone; ?></div>
-              <p class="from-Item-Label isMsg">お問い合わせ内容</p>
+              <p class="from-Item-Label isMsg" id="message_inner">お問い合わせ内容</p>
               <div class="from-Item-element" id="message" name="message"><?php echo $message; ?></div>
             </div>
             <!-- hiddenで値を次の画面に渡す -->
@@ -143,8 +143,8 @@ $headers = "From: " . $email;
             <input type="hidden" name="timezone" value="<?= $timezone ?>">
             <input type="hidden" name="message" value="<?= $message ?>">
             <div class="from-Item-button">
-              <input type="submit" class="from-Btn" value="メールを送信する">
-              <button type="button" class="from-Btn back" onclick="history.back()">戻る</button>
+              <input type="submit" class="from-Btn" id = "from_Btn" value="メールを送信する">
+              <button type="button" class="from-Btn back" id = "from_Btn_back" onclick="history.back()">戻る</button>
             </div>
           </form>
         </div>
@@ -167,7 +167,7 @@ $headers = "From: " . $email;
         <a href="https://little-emperor.weebly.com/"><img src="../images/footer/bn_03.png" alt="小皇帝合同会社"
             class="footer_banner_image"></a>
       </div>
-      <div class="footer_text">
+      <div class="footer_text" id="copyright">
         <p>Copyright © 2015 新星会合同会社 All Rights Reserved designed</p>
       </div>
     </footer>

@@ -96,7 +96,7 @@ function changeLanguage(lang) {
     switch (lang) {
         //日本語、英語用フォントに変更
         case "en":
-        case "jp":
+        case "ja":
             document.getElementById("top_main_box").style.fontFamily = 'sans-serif';
             return;
         //中文用にfontを変更

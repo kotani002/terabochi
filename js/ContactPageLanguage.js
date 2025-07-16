@@ -6,63 +6,53 @@ const translations = {
     /*日本語のローカライズ用データ */
     ja: {
         /*共通ヘッダー*/
-        header_title_logo_image: "../images/top/top_titlerogo2.svg",
-        tel_box_top_image: "../images/top/top_tel1.svg",
-        menu_search: "../images/top/UI_top_search.svg",
-        menu_eidaikuyou: "../images/top/UI_top_eidaikuyou.svg",
-        menu_funeral: "../images/top/UI_top_funeral.svg",
-        menu_moving: "../images/top/push/UI_top_moving_push.svg",
-        menu_tombstone: "../images/top/UI_top_tombstone.svg",
+        header_title_logo_image: "../../images/top/top_titlerogo2.svg",
+        tel_box_top_image: "../../images/top/top_tel1.svg",
+        menu_search: "../../images/top/UI_top_search.svg",
+        menu_eidaikuyou: "../../images/top/UI_top_eidaikuyou.svg",
+        menu_funeral: "../../images/top/UI_top_funeral.svg",
+        menu_moving: "../../images/top/UI_top_moving.svg",
+        menu_tombstone: "../../images/top/UI_top_tombstone.svg",
         /*共通フッダー*/
         copyright: "Copyright © 2025 新星会合同会社 All Rights Reserved designed",
 
         /*ボディ内容のデータ*/
-        inquiry_image:"../images/common/UI_inquiry.svg",
-        moving_title_text:"お墓の引っ越しを行う事を「改葬(かいそう)」といいます",
-        moving_top_image:"../images/moving/image_moving_top.svg",
-        moving_bottom_image:"../images/moving/image_moving_bottom.svg",
-
+        info_main_inner_header_text: "入力内容の確認",
+        from_Btn_back:"戻る",
     },
     /*英語のローカライズ用データ*/
     en: {
         /*共通ヘッダー*/
-        header_title_logo_image: "../images/localize/en/top/rogo2_en.svg",
-        tel_box_top_image: "../images/localize/en/top/image_tel_en.svg",
-        menu_search: "../images/localize/en/top/UI_search_en.svg",
-        menu_eidaikuyou: "../images/localize/en/top/UI_eidaikuyou_en.svg",
-        menu_funeral: "../images/localize/en/top/UI_funeral_en.svg",
-        menu_moving: "../images/localize/en/top/UI_moving_push_en.svg",
-        menu_tombstone: "../images/localize/en/top/UI_tombstone_en.svg",
+        header_title_logo_image: "../../images/localize/en/top/rogo2_en.svg",
+        tel_box_top_image: "../../images/localize/en/top/image_tel_en.svg",
+        menu_search: "../../images/localize/en/top/UI_search_en.svg",
+        menu_eidaikuyou: "../../images/localize/en/top/UI_eidaikuyou_en.svg",
+        menu_funeral: "../../images/localize/en/top/UI_funeral_en.svg",
+        menu_moving: "../../images/localize/en/top/UI_moving_en.svg",
+        menu_tombstone: "../../images/localize/en/top/UI_tombstone_en.svg",
         /*共通フッダー*/
         copyright: "Copyright © 2025 Shinseikai LLC. All Rights Reserved",
 
         /*ボディ内容のデータ*/
-        inquiry_image:"../images/localize/en/button/UI_inquiry_en.svg",
-        moving_title_text:"Moving a grave is called “Kaisō” (reburial).",
-        moving_top_image:"../images/localize/en/image_moving2_en.svg",
-        moving_bottom_image:"../images/localize/en/image_moving3_en.svg",
-
-
-
+        info_main_inner_header_text: "Email sent successfully.",
+        from_Btn_back:"Back",
     },
     /*中国語のローカライズ用データ*/
     zh: {
         /*共通ヘッダー*/
-        header_title_logo_image: "../images/localize/zh/top/rogo2_zh.svg",
-        tel_box_top_image: "../images/localize/zh/top/image_tel_zh.svg",
-        menu_search: "../images/localize/zh/top/UI_search_zh.svg",
-        menu_eidaikuyou: "../images/localize/zh/top/UI_eidaikuyou_zh.svg",
-        menu_funeral: "../images/localize/zh/top/UI_funeral_zh.svg",
-        menu_moving: "../images/localize/zh/top/UI_moving_push_zh.svg",
-        menu_tombstone: "../images/localize/zh/top/UI_tombstone_zh.svg",
+        header_title_logo_image: "../../images/localize/zh/top/rogo2_zh.svg",
+        tel_box_top_image: "../../images/localize/zh/top/image_tel_zh.svg",
+        menu_search: "../../images/localize/zh/top/UI_search_zh.svg",
+        menu_eidaikuyou: "../../images/localize/zh/top/UI_eidaikuyou_zh.svg",
+        menu_funeral: "../../images/localize/zh/top/UI_funeral_zh.svg",
+        menu_moving: "../../images/localize/zh/top/UI_moving_zh.svg",
+        menu_tombstone: "../../images/localize/zh/top/UI_tombstone_zh.svg",
         /*共通フッダー*/
         copyright: "版权所有 © 2025 新星会有限责任公司。保留所有权利。",
 
         /*ボディ内容のデータ*/
-        inquiry_image:"../images/localize/zh/button/UI_inquiry_zh.svg",
-        moving_title_text:"将墓地迁移称为“改葬”。",
-        moving_top_image:"../images/localize/zh/image_moving2_zh.svg",
-        moving_bottom_image:"../images/localize/zh/image_moving3_zh.svg",
+        info_main_inner_header_text: "邮件已发送。",
+        from_Btn_back:"返回",
     }
 };
 
@@ -92,15 +82,12 @@ function changeLanguage(lang) {
     menu_tombstone.src = t.menu_tombstone;
     document.getElementById("copyright").innerHTML = t.copyright;
 
-    /*ボディ内容変更*/
-    const inquiry_image = document.getElementById("inquiry_image");
-    inquiry_image.src = t.inquiry_image;
 
-    document.getElementById("moving_title_text").innerHTML = t.moving_title_text;
-    const moving_top_image = document.getElementById("moving_top_image");
-    moving_top_image.src = t.moving_top_image;
-    const moving_bottom_image = document.getElementById("moving_bottom_image");
-    moving_bottom_image.src = t.moving_bottom_image;
+    /*ボディ内容のデータ*/
+    document.getElementById("info_main_inner_header_text").innerText = t.info_main_inner_header_text;
+    document.getElementById("from_Btn_back").value = t.from_Btn_back;
+
+
     value = String(lang);
     /*同じセッション中は言語を統一させたいのでセッションストレージにデータを保存 */
     sessionStorage.setItem('SelectLanguage', value);
