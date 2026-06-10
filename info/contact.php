@@ -19,6 +19,7 @@ $headers = "From: " . $email;
 
 <head>
 	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
 	<meta name="viewport" content="width=device-width,initial-scale=1">
 	<meta name="description" content="寺墓地.COM(ドットコム) - 新星会合同会社のサイトです">
 	<meta name="description"
@@ -36,7 +37,7 @@ $headers = "From: " . $email;
 		<div class="header_inner_logo">
 			<!--タイトルロゴの位置-->
 			<div class="titlerogo-box">
-				<a href="../index.html"><img src="../images/top/top_titlerogo2.svg" alt="タイトルロゴ"
+				<a href="../index.html" rel="nofollow"><img src="../images/top/top_titlerogo2.svg" alt="トップページ"
 						class="header_title_logo" id="header_title_logo_image"></a>
 			</div>
 			<!--ヘッダーの右側に配置しているオブジェクト-->
@@ -61,12 +62,12 @@ $headers = "From: " . $email;
 					}
 				</script>
 
-				<a href="../info/index.html">
+				<a href="../info/index.html" rel="nofollow">
 					<img src="../images/top/top_tel1.svg" alt="お問い合わせ資料はこちらまで" class="tel-box-top"
 						id="tel_box_top_image">
 				</a>
 
-				<a href="../info/index.html" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
+				<a href="../info/index.html" rel="nofollow" id="telLinkNumber"><img src="../images/top/top_tel2.svg"
 						alt="電話番号:0120-686-684" class="tel-box-bottom"></a>
 
 				<!--ここのJSで端末を判断する-->

@@ -43,8 +43,8 @@
 			<div class="section01_box01">
 				<div class="section01_text"><img src="./img/section01_text.svg" alt="東京都世田谷区の西、環状８号線の外側に円光寺はあります。近くに砧公園、世田谷総合運動場といった自然豊かな環境に恵まれた浄土宗のお寺です。圓光寺は京都東山の禅林寺を総本山とする、浄土宗西山禅林寺派の東京で唯一つのお寺です。" /></div>
 				<div class="section01_img">
-					<div class="section01_img01"><img src="./img/section01_img01.jpg" alt="" /></div>
-					<div class="section01_img02"><img src="./img/section01_img02.jpg" alt="" /></div>
+					<div class="section01_img01"><img src="./img/section01_img01.jpg" alt="トップページ" /></div>
+					<div class="section01_img02"><img src="./img/section01_img02.jpg" alt="トップページ" /></div>
 				</div>
 			</div>
 		</section>
@@ -82,35 +82,35 @@
 				<h3><img src="./img/section02_subtitle02.svg" alt="円光寺の紹介" /></h3>
 				<ul>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img01.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img01.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">円光寺の山号（さんごう）は「月輪山(げつりんざん）」といいます。正門を入って右側に本堂がありますが、その正面にこの山号が記されています。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img02.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img02.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">本堂の北側の奥に「聖観世音菩薩像」があります。大正８年に日本橋で建立され、翌９年に移されました。地域の方々、お檀家には「観音さん」と呼ばれ親しまれています。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img03.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img03.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">本堂から墓地に向かって行くと、右側に無縁供養塔があります。<br />これは平成12年10月にあるお檀家の方の寄進で建立されました。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img04.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img04.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">無縁供養塔の向かい側に「十萬霊塔」があります。圓光寺が日本橋にあったころからのもので、前の無縁塔と考えられます（遺骨は安置されておりません）。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img05.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img05.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">本堂の中心にある阿弥陀如来像。浄土宗における御本尊であります。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img06.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img06.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">阿弥陀如来の向かって右側にあるのが圓光大師像。「圓光大師」というのは宗祖法然上人の東山天皇から賜った謚号。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img07.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img07.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">向かって左が見真大師像。「見真大師」というのは親鸞聖人の謚号これら両大師像は明治時代からのものです。普段は扉が閉まっていて中は見られません。</div>
 					</li>
 					<li>
-						<div class="section02_box03_img"><img src="./img/section02_box03_img08.jpg" alt="" /></div>
+						<div class="section02_box03_img"><img src="./img/section02_box03_img08.jpg" alt="トップページ" /></div>
 						<div class="section02_box03_text">十萬霊塔のすぐ横にある門柱。円光寺が日本橋にあった当時のものを移築しました。</div>
 					</li>
 				</ul>			

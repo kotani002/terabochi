@@ -12,6 +12,10 @@ html {
     background-color: #002504;
 }
 
+.new_icon {
+    vertical-align: text-bottom;
+}
+
 /* ※中央寄せしたいだけなので、ここから先は本題と関係ない */
 html,
 body,
@@ -190,7 +194,7 @@ body {
     width: 100%;
     height: auto;
     max-width: 200px;
-    
+
 }
 
 .UI_top_funeral {
@@ -485,7 +489,8 @@ input[type="radio"] {
     font-weight: bold;
     font-size: 1rem;
 }
-.top_text{
+
+.top_text {
     margin: 3%;
     text-align: center;
 }
@@ -495,11 +500,10 @@ input[type="radio"] {
 }
 
 /*注意書きを表示させる*/
-.top_attention
-{
+.top_attention {
     text-align: center;
     align-content: center;
-    margin:auto;
+    margin: auto;
     width: 85%;
     height: auto;
     margin-top: 5%;
